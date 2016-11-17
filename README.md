@@ -1,6 +1,8 @@
 # FMDBManager
+
 * 对FMDB进行的简单封装，减少sql语句编写，可自动判断表中是否有新增字段并进行更新，提供多种查询方法；
-* 具体方法如下：（使用详见Demo）
+
+* 具体方法如下：
 
  ``` objc
  
@@ -69,3 +71,5 @@
 + (BOOL)clearTable:(NSString *)tableName;
 
  ```
+
+* 详细使用方法请参考Demo
