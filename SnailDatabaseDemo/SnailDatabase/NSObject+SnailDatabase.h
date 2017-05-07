@@ -1,10 +1,22 @@
-# SnailDatabase
+//
+//  NSObject+SnailDatabase.h
+//  FMDBManagerExample
+//
+//  Created by zhanghao on 2017/4/19.
+//  Copyright © 2017年 zhanghao. All rights reserved.
+//
 
-* 基于[FMDB](https://github.com/ccgus/fmdb)进行的简单封装，减少sql语句编写，可自动判断表中是否有新增字段并进行更新，提供多种查询方法；
+#import <Foundation/Foundation.h>
+#import "SnailDatabase.h"
 
-* 具体方法如下：
- 
-``` objc
+NS_ASSUME_NONNULL_BEGIN
+
+/* -------------------------------------------------------------
+ 该类别是对SnailDatabase类进一步封装，可直接使用SnailDatabase类中的方法
+ - 只有遵守SnailDatabaseProtocol协议的类，才能调用该类别中的方法 !!!
+-------------------------------------------------------------- */
+@interface NSObject (SnailDatabase)
+
 /// 是否存在表
 - (BOOL)sl_tableExists;
 
@@ -123,7 +135,7 @@
  NSString *sql = @"SELECT * FROM table_name WHERE songID > '7'";
  */
 - (NSArray *)sl_mapColumnSelectSqlWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
-```
 
-* 更多详细的使用方法请参见Demo
+@end
 
+NS_ASSUME_NONNULL_END
