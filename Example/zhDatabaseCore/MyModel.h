@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "zhDatabaseProtocol.h"
 #import "NSObject+zhDatabase.h" // 引入"NSObject+SnailDatabase.h"
 
 @interface MyModel : NSObject <zhDatabaseProtocol> // 必须遵守协议

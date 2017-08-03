@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import "zhDatabaseProtocol.h"
-#import "FMDB.h"
+@class FMDatabase;
 
 NS_ASSUME_NONNULL_BEGIN
 

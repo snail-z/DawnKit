@@ -4,6 +4,7 @@
 //
 
 #import "NSObject+zhDatabase.h"
+#import "zhDatabaseCore.h"
 
 @implementation NSObject (zhDatabase)
 
