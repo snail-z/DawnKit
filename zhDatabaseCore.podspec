@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'zhDatabaseCore'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Based on FMDB package, the use of more simple and easy.'
 
 # This description is used to generate tags and improve search results.
@@ -25,8 +25,6 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '7.0'
-  s.platform        = :ios, "7.0"
-  s.requires_arc    = true
 
   s.source_files = 'zhDatabaseCore/Classes/**/*'
   

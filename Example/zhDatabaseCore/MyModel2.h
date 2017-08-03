@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "zhDatabaseProtocol.h"
 #import "NSObject+zhDatabase.h"
 
 @interface MyModel2 : NSObject <zhDatabaseProtocol>

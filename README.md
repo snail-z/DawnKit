@@ -1,7 +1,7 @@
 # zhDatabaseCore
 
 [![Language](https://img.shields.io/badge/Language-%20Objective--C%20-orange.svg)](https://travis-ci.org/snail-z/zhDatabaseCore)
-[![Version](https://img.shields.io/badge/pod-v0.1.0-brightgreen.svg)](http://cocoapods.org/pods/zhDatabaseCore)
+[![Version](https://img.shields.io/badge/pod-v0.1.1-brightgreen.svg)](http://cocoapods.org/pods/zhDatabaseCore)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://cocoapods.org/pods/zhDatabaseCore)
 [![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)](http://cocoapods.org/pods/zhDatabaseCore)
 

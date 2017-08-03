@@ -7,6 +7,7 @@
 #import "zhDatabaseFile.h"
 #import "NSString+zhDatabase.h"
 #import <objc/runtime.h>
+#import "FMDB.h"
 
 #ifndef __OPTIMIZE__
 #define NSLog(s, ...) NSLog(@"\n =======> [%@ in line %d] %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )

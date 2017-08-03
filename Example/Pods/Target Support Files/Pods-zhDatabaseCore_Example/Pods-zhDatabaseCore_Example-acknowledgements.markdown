@@ -34,7 +34,7 @@ THE SOFTWARE.
 
 ## zhDatabaseCore
 
-Copyright (c) 2017 gren-beans <zhanghao@huixiangtech.com>
+Copyright (c) 2017 snail-z <haozhang0770@163.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
