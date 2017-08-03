@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://cocoapods.org/pods/zhDatabaseCore)
 [![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)](http://cocoapods.org/pods/zhDatabaseCore)
 
-Based on FMDB package, the use of more simple and easy.
+Based on [FMDB](https://github.com/ccgus/fmdb) package, the use of more simple and easy.
 
 ## Example
 
