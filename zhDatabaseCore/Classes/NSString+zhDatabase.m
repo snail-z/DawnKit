@@ -89,7 +89,7 @@
         [s appendString:[NSString stringWithFormat:@"ORDER BY %@ %@ ", key, sort]];
     }
     if (limitCount > 0) {
-        [s appendString:[NSString stringWithFormat:@"LIMIT %lu", limitCount]];
+        [s appendString:[NSString stringWithFormat:@"LIMIT %ld", (long)limitCount]];
     }
     return s;
 }
