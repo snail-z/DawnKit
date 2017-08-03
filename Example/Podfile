@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'zhDatabaseCore_Example' do
+  pod 'zhDatabaseCore', :path => '../'
+  pod 'FMDB', '~> 2.6.2'
+  
+  target 'zhDatabaseCore_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

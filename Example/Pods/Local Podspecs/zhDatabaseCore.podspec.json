@@ -1,0 +1,27 @@
+{
+  "name": "zhDatabaseCore",
+  "version": "0.1.0",
+  "summary": "A short description of zhDatabaseCore.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/gren-beans/zhDatabaseCore",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "gren-beans": "zhanghao@huixiangtech.com"
+  },
+  "source": {
+    "git": "https://github.com/gren-beans/zhDatabaseCore.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "zhDatabaseCore/Classes/**/*",
+  "dependencies": {
+    "FMDB": [
+      "~> 2.6.2"
+    ]
+  }
+}

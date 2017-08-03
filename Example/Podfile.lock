@@ -1,0 +1,22 @@
+PODS:
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - zhDatabaseCore (0.1.0):
+    - FMDB (~> 2.6.2)
+
+DEPENDENCIES:
+  - FMDB (~> 2.6.2)
+  - zhDatabaseCore (from `../`)
+
+EXTERNAL SOURCES:
+  zhDatabaseCore:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  zhDatabaseCore: b2d4569b101b00c22bbb39a846b7a26adf7c80c5
+
+PODFILE CHECKSUM: 8a8682edd23252ad566a2b9f9ca3fe07d54660ae
+
+COCOAPODS: 1.2.1

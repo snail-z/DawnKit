@@ -1,0 +1,6 @@
+framework module zhDatabaseCore {
+  umbrella header "zhDatabaseCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
