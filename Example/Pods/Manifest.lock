@@ -1,22 +1,16 @@
 PODS:
-  - FMDB (2.6.2):
-    - FMDB/standard (= 2.6.2)
-  - FMDB/standard (2.6.2)
-  - zhDatabaseCore (0.1.0):
-    - FMDB (~> 2.6.2)
+  - AnswerExtensions (0.1.0)
 
 DEPENDENCIES:
-  - FMDB (~> 2.6.2)
-  - zhDatabaseCore (from `../`)
+  - AnswerExtensions (from `../`)
 
 EXTERNAL SOURCES:
-  zhDatabaseCore:
-    :path: ../
+  AnswerExtensions:
+    :path: "../"
 
 SPEC CHECKSUMS:
-  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  zhDatabaseCore: 8c45978c9d0f3193f5125dade4ac4af320d5ae9d
+  AnswerExtensions: 4a905eab900460fd4a04b5d0b0ba0f61906b588c
 
-PODFILE CHECKSUM: 8a8682edd23252ad566a2b9f9ca3fe07d54660ae
+PODFILE CHECKSUM: 413301ec70329e8477fc78048c5c7c09773d7e8d
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.11.3

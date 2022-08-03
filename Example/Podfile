@@ -1,10 +1,11 @@
 use_frameworks!
 
-target 'zhDatabaseCore_Example' do
-  pod 'zhDatabaseCore', :path => '../'
-  pod 'FMDB', '~> 2.6.2'
-  
-  target 'zhDatabaseCore_Tests' do
+platform :ios, '10.0'
+
+target 'AnswerExtensions_Example' do
+  pod 'AnswerExtensions', :path => '../'
+
+  target 'AnswerExtensions_Tests' do
     inherit! :search_paths
 
     
