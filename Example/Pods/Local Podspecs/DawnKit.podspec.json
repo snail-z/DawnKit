@@ -1,19 +1,19 @@
 {
   "name": "DawnKit",
-  "version": "0.1.0",
-  "summary": "A short description of DawnKit.",
+  "version": "1.0.1",
+  "summary": "Daily accumulation of DawnKit.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/zhanghao/DawnKit",
+  "homepage": "https://github.com/snail-z/DawnKit",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "zhanghao": "zhanghao@zuche.com"
+    "zhanghao": "haozhang0770@163.com"
   },
   "source": {
-    "git": "https://github.com/zhanghao/DawnKit.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/snail-z/DawnKit.git",
+    "tag": "1.0.1"
   },
   "platforms": {
     "ios": "11.0"
@@ -23,8 +23,16 @@
   "subspecs": [
     {
       "name": "DawnExtensions",
-      "source_files": "DawnKit/Classes/DawnExtensions/**/*",
-      "public_header_files": "PKCategories/Classes/UIKit/**/*.h"
+      "source_files": "DawnKit/Classes/DawnExtensions/**/*"
+    },
+    {
+      "name": "DawnUI",
+      "dependencies": {
+        "DawnKit/DawnExtensions": [
+
+        ]
+      },
+      "source_files": "DawnKit/Classes/DawnUI/**/*"
     }
   ],
   "swift_version": "5.1"

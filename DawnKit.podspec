@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DawnKit'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'Daily accumulation of DawnKit.'
 
 # This description is used to generate tags and improve search results.
@@ -38,8 +38,8 @@ TODO: Add long description of the pod here.
   end
   
   s.subspec 'DawnUI' do |ss|
+      ss.dependency 'DawnKit/DawnExtensions'
       ss.source_files = 'DawnKit/Classes/DawnUI/**/*'
-      ss.dependency 'DawnKit/Classes/DawnExtensions/**/*'
   end
   
   # s.resource_bundles = {

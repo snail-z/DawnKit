@@ -7,62 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00782AF43DE4525ED62CB11C52F112AE /* UIView+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F44ED926B24D7401DE462A11E69227 /* UIView+DawnExtensions.swift */; };
-		017A4E4E6897D0E26884A973ECDD5BE4 /* NSUIApplication+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27904720AEE0640C7A645A0CE9DF06E3 /* NSUIApplication+DawnExtensions.swift */; };
-		0D2902255E9A0F31F6280B1C8C0838AB /* Array+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9763F8770B7E6E57701BB75A480AF /* Array+DawnExtensions.swift */; };
-		117A536C50CC69C637DECD2AC27D9774 /* UIScreen+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A81C7FCC49600014D7DE9203441B3B /* UIScreen+DawnExtensions.swift */; };
-		1B1BCDAB785E9580569A9489A8BFFFBA /* UIViewController+ANExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9B8684ACD444871DB9B26BFF123D3D /* UIViewController+ANExtensions.swift */; };
-		1E5ECFE900C680CEEABEAD5B92433487 /* UIButton+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F592290BF8741C892C8CEF8503DF5 /* UIButton+DawnExtensions.swift */; };
-		23A41CF99996D134048A07CE955342ED /* DawnShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F94826C8477FDBE0CA81925393423 /* DawnShapeLayer.swift */; };
-		2C747511645F34C84C965908AAA89538 /* NSAttributedString+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0C4EE2A0C9C20943826F3E8EABDBF4 /* NSAttributedString+DawnExtensions.swift */; };
-		32320F58976B94434F2B340BEA1D697C /* CALayer+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56B95BD2A5C2313C31C3999C45886 /* CALayer+DawnExtensions.swift */; };
-		33F845498E7577C3B3EB0B9D4FD5BB2A /* DawnConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97C92EB29B5B5D20EFB198EC64C18E4 /* DawnConstraints.swift */; };
+		0252A57DEEAAE459389A23BADC29422A /* DawnGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A461F06F9AFC89E924606109E24C4839 /* DawnGradientView.swift */; };
+		02EAA82C7125986FD87F6C3D2BF74382 /* DawnToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA4B08735A5A03E2CA5942F73F948F /* DawnToast.swift */; };
+		1222CC3F0676957A8662550A2742DA89 /* UITabBar+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6512372ABC07479DA9D4061E7616D0 /* UITabBar+DawnExtensions.swift */; };
+		14472C5F3C5D90501DF8C8ECF15BF209 /* NSAttributedString+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0C4EE2A0C9C20943826F3E8EABDBF4 /* NSAttributedString+DawnExtensions.swift */; };
+		18092E961C611A2969F203C655A245BF /* NSString+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AB87DAC82FEAC2A07A0926F71106F /* NSString+DawnExtensions.swift */; };
+		196D31C2C7AFD943527138C6589D7679 /* NSUIColor+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D742526E6C8E1A792F785301CBDBE /* NSUIColor+DawnExtensions.swift */; };
+		19B827654F45B58204CA5EA21C7F1964 /* UITextField+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86885BA26BE3E7AFCFD9715752BEF07C /* UITextField+DawnExtensions.swift */; };
+		2135467A49DEF6B1EED7FE7442700CAF /* UINavigationController+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAD169AFEC81FC00D71EE0748C3ADBF /* UINavigationController+DawnExtensions.swift */; };
+		22CF1F00418C79924AC69563AC019055 /* NSUIApplication+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27904720AEE0640C7A645A0CE9DF06E3 /* NSUIApplication+DawnExtensions.swift */; };
+		29EF81D05DE901091822EE1C7C9F6539 /* String+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6A951413856BCB5207FB60BE4BDA67 /* String+DawnExtensions.swift */; };
+		30016F509CA4B1779D4AB72CE35F6E56 /* UITextView+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1CBCC80CC24E0E959D9ACCDFB17DC4 /* UITextView+DawnExtensions.swift */; };
 		3842DD1BEDC5F2A8DAFC6AD401F765D9 /* Pods-DawnKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A54E880F369D2A8D878741888C0E05A9 /* Pods-DawnKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D85515DD6EA56A8D476A04896C243CE /* DawnToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B065D79BDBD37235D80145A166EC9B5 /* DawnToast.swift */; };
-		3DCCD0BBE230C1B7ECA5C39730BB5619 /* DispatchQueue+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292ABBDCDEC8A30865CD329520B879F4 /* DispatchQueue+DawnExtensions.swift */; };
-		4086DDDA90BDE2E1E223866E77CC88AB /* DawnTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF4491C9F7CC6F4E31583DC59327BBE /* DawnTextField.swift */; };
-		46BADB1EC93F6DBFCABE0F5F10E7D991 /* UITextView+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1CBCC80CC24E0E959D9ACCDFB17DC4 /* UITextView+DawnExtensions.swift */; };
-		490A44DD20F151859C26B097900E58A9 /* UIScrollView+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE53C8E891038E06C3A64017DB4174 /* UIScrollView+DawnExtensions.swift */; };
-		4AF7D1629701D3CCA57A125584560B53 /* UINavigationBar+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2515C7E91EB0F009DD43AB6EB78778 /* UINavigationBar+DawnExtensions.swift */; };
-		4C14D68DE1C2D7F72F7901D0E2B087FC /* CGGeometry+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCA383A647E9CC301CB962B3495D66 /* CGGeometry+DawnExtensions.swift */; };
-		5E5F885DCD10C8D4C3B1DF4FF39B11B9 /* Date+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179C7B4A0CD659EC087D14EB83DFD44D /* Date+DawnExtensions.swift */; };
-		706C404989E83AAAE9FBE2F8FFB36F17 /* NSUIGestureRecognizer+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803A34EE16D00C6A3AE21E7198DEEFD4 /* NSUIGestureRecognizer+DawnExtensions.swift */; };
-		7563C868C08C3E8326600447F37B3D55 /* UIAlertController+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471DBB5E717C815B9793A996605B3AC /* UIAlertController+DawnExtensions.swift */; };
-		762BB0260768A42FEA33F7F9072D995E /* Double+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7166130697AFF77CE0BAC608F0DCAE /* Double+DawnExtensions.swift */; };
-		7DBFE6B81538B3EC012FEE20E717E7EB /* UITabBar+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6512372ABC07479DA9D4061E7616D0 /* UITabBar+DawnExtensions.swift */; };
-		827D79BE9A83050E2855FA3FE1242218 /* NSUIColor+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D742526E6C8E1A792F785301CBDBE /* NSUIColor+DawnExtensions.swift */; };
-		857D564B8B3A8586BB3E91AD06CE24B3 /* UITextField+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86885BA26BE3E7AFCFD9715752BEF07C /* UITextField+DawnExtensions.swift */; };
-		880D2A95F106033469C707AF848B60E1 /* DawnGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CF1845CDD5AD1A99858CDF0711107B /* DawnGradientView.swift */; };
+		38FA6D98A479F478BA987BA9C3C832D5 /* UIViewController+ANExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9B8684ACD444871DB9B26BFF123D3D /* UIViewController+ANExtensions.swift */; };
+		3BEBD7590B24E900A11EB7DB7232412A /* UINavigationBar+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2515C7E91EB0F009DD43AB6EB78778 /* UINavigationBar+DawnExtensions.swift */; };
+		3E5396F443C1E4C95AE9FA70DD5D3ADB /* DawnConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A9799ED7AC9DAC0455CEB6E58035D /* DawnConstraints.swift */; };
+		3FC58B846710491E216F1B33D2A3A0B6 /* UIWindow+ANExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0F15028AF1E3E9666B02832B2B5E8 /* UIWindow+ANExtensions.swift */; };
+		408B876B4FDB8CB73D61B8C3AB7A8FC7 /* DispatchQueue+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292ABBDCDEC8A30865CD329520B879F4 /* DispatchQueue+DawnExtensions.swift */; };
+		41517B4DF433214073B2F82EB68FD6B7 /* Bundle+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AECFD90719A03C9FB07F1496D605B58 /* Bundle+DawnExtensions.swift */; };
+		4FF6FB064D8611F91C4015C494685DB9 /* UIScreen+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A81C7FCC49600014D7DE9203441B3B /* UIScreen+DawnExtensions.swift */; };
+		525285BD639DFB134611896634753AE8 /* UIScrollView+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE53C8E891038E06C3A64017DB4174 /* UIScrollView+DawnExtensions.swift */; };
+		59E55485ACFCAA914357A478F1E79954 /* NSUIGestureRecognizer+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803A34EE16D00C6A3AE21E7198DEEFD4 /* NSUIGestureRecognizer+DawnExtensions.swift */; };
+		607E4613A0E944808074DA719390774E /* DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFECC81359617813F3A11169FFF3F0F7 /* DawnExtensions.swift */; };
+		640ED2B456BCE2DC7F8547EA4C970A56 /* DawnKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699E8F51A671054A30CBA15C13BE54A /* DawnKit-dummy.m */; };
+		691A7D2FD5D6227EF2F42423F8BABD10 /* UIDevice+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB269C4D54F19B80A97D4E93F561D5A /* UIDevice+DawnExtensions.swift */; };
+		6D18017D0B7C726C02043C4ED20223D2 /* Dictionary+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B17D17BE3247F37735CE1AA7473600B /* Dictionary+DawnExtensions.swift */; };
+		6EAE7DAA38B6ABBDC7B9D4941553A43D /* UICollectionView+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C7DC52A65EAC66BD34A05B20FED2D2 /* UICollectionView+DawnExtensions.swift */; };
+		702417E4B7FCB3E052B145B9384F0A8D /* DawnTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDB775A7FBADD5C5FD5DCC347585552 /* DawnTextField.swift */; };
+		794ECBC7A5400B0B1575E207C9B9CE75 /* DawnButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CEC6A4216A1918AEBBDE55D6B10BDF /* DawnButton.swift */; };
+		87B2AD3A95A164FDE8E763CE184BCBAC /* Date+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179C7B4A0CD659EC087D14EB83DFD44D /* Date+DawnExtensions.swift */; };
 		8B271DCB8D9B95F698BE68BA5AA9303A /* DawnKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DC29A4627DB2F0EC4D5D58697C47CF6 /* DawnKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CD8134DC24A3EE7D912FB9499911605 /* DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFECC81359617813F3A11169FFF3F0F7 /* DawnExtensions.swift */; };
-		9749A3707FDDFF5D703185E90A56DE20 /* DawnTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE010698A0BA321EAD8F5B5FE895068 /* DawnTextView.swift */; };
-		9E016BAC24C969E0CF89F180800699BD /* UIControl+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2451FD1725E0990852F6C294F5D9F38B /* UIControl+DawnExtensions.swift */; };
-		A069EF0C275F7E8F4D5B4AE3962610C1 /* NSString+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AB87DAC82FEAC2A07A0926F71106F /* NSString+DawnExtensions.swift */; };
-		A105A2A2447732C66937F55DA56F51F3 /* UICollectionView+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C7DC52A65EAC66BD34A05B20FED2D2 /* UICollectionView+DawnExtensions.swift */; };
-		A2AE3039A6EB1D1E4FA5865C32EDA2C8 /* UITableView+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE2A8029A9E21B4B54D39DC1440E05 /* UITableView+DawnExtensions.swift */; };
-		A389B3C774FDF74E380598F95D3574D4 /* UILabel+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502A4D98216E27B35081D3E1A71B1419 /* UILabel+DawnExtensions.swift */; };
+		8E8B73308ABCCD6F156DE68F3419A1AB /* CALayer+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56B95BD2A5C2313C31C3999C45886 /* CALayer+DawnExtensions.swift */; };
+		8FB95151D6A6A8094B48A71FCD339973 /* DawnTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE5549422549EECB3D1C94219984080 /* DawnTextView.swift */; };
+		92A58D5355C3D0F65F82AB0FE1BE0076 /* CGGeometry+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCA383A647E9CC301CB962B3495D66 /* CGGeometry+DawnExtensions.swift */; };
+		9A8394076A24795D7CF53A722B7283C0 /* UIView+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F44ED926B24D7401DE462A11E69227 /* UIView+DawnExtensions.swift */; };
+		9C757A9AC1B6BDF0526953CCA7F21D9F /* UIAlertController+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471DBB5E717C815B9793A996605B3AC /* UIAlertController+DawnExtensions.swift */; };
+		A3940F300C9F2CCC781A24DE347A5773 /* UIControl+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2451FD1725E0990852F6C294F5D9F38B /* UIControl+DawnExtensions.swift */; };
 		A5FE56E575A92A4F0E2FA8A2993E1FB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		A7BCACE4A5C1C5D212887405849F9182 /* NSUIFont+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C9E61DDA0A473140D9E53C8EB58A8 /* NSUIFont+DawnExtensions.swift */; };
 		A82E779EF758DEEAFABF7269DF848AF4 /* Pods-DawnKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 191DF5478FF3F8851FC00FA3EEBA9187 /* Pods-DawnKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAB8FDA95A3909B0DFAB142D645ECAD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		ABB2084833F8316F3B3659FC5B5C7ECF /* DawnKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699E8F51A671054A30CBA15C13BE54A /* DawnKit-dummy.m */; };
-		AC73CA272F281A0DB241E933AFDF33CB /* Timer+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0FF8346562D565963D6C2C95961B8 /* Timer+DawnExtensions.swift */; };
-		AC978293731FE761C4698D59D6F066A3 /* NSUIFont+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C9E61DDA0A473140D9E53C8EB58A8 /* NSUIFont+DawnExtensions.swift */; };
-		AFF95B591CB686E302DF8ECF43BE10ED /* Bundle+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AECFD90719A03C9FB07F1496D605B58 /* Bundle+DawnExtensions.swift */; };
-		B77D0215FD34AC9AD5D250A0FBC9A15B /* DawnButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB401D0FA47B6CB82936425C91B889 /* DawnButton.swift */; };
-		B8DBB4DC179935F7E39F50D42EFD4E79 /* UIDevice+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB269C4D54F19B80A97D4E93F561D5A /* UIDevice+DawnExtensions.swift */; };
-		BBC961271CF778BB45EFBC8589FFCF9F /* FileManager+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABD63C986CD6164D15AE8BED78221D8 /* FileManager+DawnExtensions.swift */; };
+		AAD0407C0CC24268BFA57D1BFF76CE61 /* FileManager+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABD63C986CD6164D15AE8BED78221D8 /* FileManager+DawnExtensions.swift */; };
+		AE5BF337D0C7BA6989F0A03E38E1DF09 /* UIImage+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5033250552800736478AB0942C5A55 /* UIImage+DawnExtensions.swift */; };
+		AEC5B9B7C1A226A9FFE48BB5B820A09F /* DawnTagContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3088D460D0AAC922790CC4F629E28FC2 /* DawnTagContainerView.swift */; };
+		B63D9D333897D8A2A3CE669EAB2DF505 /* Double+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7166130697AFF77CE0BAC608F0DCAE /* Double+DawnExtensions.swift */; };
 		BF750B9C3A6F154D17E58DC733162050 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		BF84E58B4F794A87CAA4738CCE2B7078 /* DawnTagContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD34F4ADAE1600E4FD4FAABDCB845B /* DawnTagContainerView.swift */; };
-		C8C7049A61691BE606D2E4252435930D /* UIWindow+ANExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0F15028AF1E3E9666B02832B2B5E8 /* UIWindow+ANExtensions.swift */; };
-		CDDD4895528074F96E79C871B5022DD6 /* NSObject+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7130C93A910A9501872384C39221AFA2 /* NSObject+DawnExtensions.swift */; };
-		DC293CD1CC57FB8AFC8E5278F3690DEC /* UIImage+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5033250552800736478AB0942C5A55 /* UIImage+DawnExtensions.swift */; };
-		DC4DF3181E19709C0D891E8C9CB200BF /* UINavigationController+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAD169AFEC81FC00D71EE0748C3ADBF /* UINavigationController+DawnExtensions.swift */; };
-		E20397E50E5385E73A6118C9DF342739 /* Dictionary+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B17D17BE3247F37735CE1AA7473600B /* Dictionary+DawnExtensions.swift */; };
-		E5D4AAA185CABFE2CC7F68F554900571 /* DawnLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8131AD720FEC688D6B8EC1DBBA483C1 /* DawnLabel.swift */; };
+		C402C3EA586EBADB1D64588EEF4AD9B2 /* DawnShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FBA98325F17737B7C72373433139B7 /* DawnShapeLayer.swift */; };
+		C7D1EABD42D08D00930B624B028FBEE6 /* Timer+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0FF8346562D565963D6C2C95961B8 /* Timer+DawnExtensions.swift */; };
+		DC1C3F90CF52CDC8A6DAA59A8B223DD5 /* UILabel+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502A4D98216E27B35081D3E1A71B1419 /* UILabel+DawnExtensions.swift */; };
+		DC4BADDAD83D80EFCC08A8620E0A6515 /* NSObject+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7130C93A910A9501872384C39221AFA2 /* NSObject+DawnExtensions.swift */; };
+		DE1043625E2F2476FA8115993F587EBE /* UIButton+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F592290BF8741C892C8CEF8503DF5 /* UIButton+DawnExtensions.swift */; };
+		DEBAFA5B60C6BEFCA8ADAC1B5567CA52 /* Array+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9763F8770B7E6E57701BB75A480AF /* Array+DawnExtensions.swift */; };
+		E8CFB8D3D8066FD66BEAFC3D4B1E483D /* DawnLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0149565A633DD63E0CCC486FE80234D4 /* DawnLabel.swift */; };
 		EBD03BE80C6621D9B0C2CB2497E16BEC /* Pods-DawnKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6E9711B0370E48CFB1F0C390BEE97 /* Pods-DawnKit_Tests-dummy.m */; };
 		F138D71805C2D730B98611973D1F5777 /* Pods-DawnKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 439E0109E0F29227649C80C1B39CAED5 /* Pods-DawnKit_Example-dummy.m */; };
-		F777A5289C70B13737D727643F8A0813 /* NSUIBezierPath+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3509E3A908365C8816B153994F41DCA /* NSUIBezierPath+DawnExtensions.swift */; };
-		FF9A28D36043424CC7A834FD741E20DF /* String+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6A951413856BCB5207FB60BE4BDA67 /* String+DawnExtensions.swift */; };
+		FF133DB4B44F062232AE231C6EEAE719 /* UITableView+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE2A8029A9E21B4B54D39DC1440E05 /* UITableView+DawnExtensions.swift */; };
+		FFBB805CB6FAE558958D89A605C206F1 /* NSUIBezierPath+DawnExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3509E3A908365C8816B153994F41DCA /* NSUIBezierPath+DawnExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,13 +83,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0149565A633DD63E0CCC486FE80234D4 /* DawnLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnLabel.swift; sourceTree = "<group>"; };
 		04F44ED926B24D7401DE462A11E69227 /* UIView+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+DawnExtensions.swift"; sourceTree = "<group>"; };
 		06BE2A8029A9E21B4B54D39DC1440E05 /* UITableView+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITableView+DawnExtensions.swift"; sourceTree = "<group>"; };
 		08101D7CAB6DA0DAEDA665A51DEA1EB0 /* Pods-DawnKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DawnKit_Example-Info.plist"; sourceTree = "<group>"; };
 		0CBE53C8E891038E06C3A64017DB4174 /* UIScrollView+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIScrollView+DawnExtensions.swift"; sourceTree = "<group>"; };
 		0ED6E9711B0370E48CFB1F0C390BEE97 /* Pods-DawnKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DawnKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		13CA5276367C81428932B90934783B7F /* Pods-DawnKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DawnKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		14CF1845CDD5AD1A99858CDF0711107B /* DawnGradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnGradientView.swift; sourceTree = "<group>"; };
 		179C7B4A0CD659EC087D14EB83DFD44D /* Date+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+DawnExtensions.swift"; sourceTree = "<group>"; };
 		190F592290BF8741C892C8CEF8503DF5 /* UIButton+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+DawnExtensions.swift"; sourceTree = "<group>"; };
 		191DF5478FF3F8851FC00FA3EEBA9187 /* Pods-DawnKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DawnKit_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -99,15 +99,17 @@
 		27904720AEE0640C7A645A0CE9DF06E3 /* NSUIApplication+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSUIApplication+DawnExtensions.swift"; sourceTree = "<group>"; };
 		292ABBDCDEC8A30865CD329520B879F4 /* DispatchQueue+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+DawnExtensions.swift"; sourceTree = "<group>"; };
 		2D75F281DD93818E3A18E225AA092F3D /* Pods-DawnKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DawnKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3088D460D0AAC922790CC4F629E28FC2 /* DawnTagContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnTagContainerView.swift; sourceTree = "<group>"; };
 		3119D653C548D0D9E70901569A24627E /* Pods-DawnKit_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-DawnKit_Tests"; path = Pods_DawnKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31CEC6A4216A1918AEBBDE55D6B10BDF /* DawnButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnButton.swift; sourceTree = "<group>"; };
 		3471DBB5E717C815B9793A996605B3AC /* UIAlertController+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIAlertController+DawnExtensions.swift"; sourceTree = "<group>"; };
-		392AD6AB6F62279D4F93A1EFEF51E5E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		392AD6AB6F62279D4F93A1EFEF51E5E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		39A81C7FCC49600014D7DE9203441B3B /* UIScreen+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIScreen+DawnExtensions.swift"; sourceTree = "<group>"; };
 		3A3E3ABC3BBAFDC1674594353D59E39D /* DawnKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DawnKit-Info.plist"; sourceTree = "<group>"; };
 		439E0109E0F29227649C80C1B39CAED5 /* Pods-DawnKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DawnKit_Example-dummy.m"; sourceTree = "<group>"; };
 		460E44C892197CCE77F4726A2C3E5C52 /* Pods-DawnKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DawnKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4699E8F51A671054A30CBA15C13BE54A /* DawnKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DawnKit-dummy.m"; sourceTree = "<group>"; };
-		4AA46E0B9D45197F113527871A8B3ACA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4AA46E0B9D45197F113527871A8B3ACA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		502A4D98216E27B35081D3E1A71B1419 /* UILabel+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UILabel+DawnExtensions.swift"; sourceTree = "<group>"; };
 		57732AD5EFA6F7A6D0BB7DD174D52AAB /* Pods-DawnKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DawnKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		5B2515C7E91EB0F009DD43AB6EB78778 /* UINavigationBar+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+DawnExtensions.swift"; sourceTree = "<group>"; };
@@ -117,7 +119,6 @@
 		7130C93A910A9501872384C39221AFA2 /* NSObject+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSObject+DawnExtensions.swift"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7966EC126845D1013654249FBCCC2C9C /* Pods-DawnKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DawnKit_Tests.modulemap"; sourceTree = "<group>"; };
-		7B065D79BDBD37235D80145A166EC9B5 /* DawnToast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnToast.swift; sourceTree = "<group>"; };
 		803A34EE16D00C6A3AE21E7198DEEFD4 /* NSUIGestureRecognizer+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSUIGestureRecognizer+DawnExtensions.swift"; sourceTree = "<group>"; };
 		81F9763F8770B7E6E57701BB75A480AF /* Array+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+DawnExtensions.swift"; sourceTree = "<group>"; };
 		84E56B95BD2A5C2313C31C3999C45886 /* CALayer+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CALayer+DawnExtensions.swift"; sourceTree = "<group>"; };
@@ -127,41 +128,40 @@
 		87C7DC52A65EAC66BD34A05B20FED2D2 /* UICollectionView+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DawnExtensions.swift"; sourceTree = "<group>"; };
 		8AECFD90719A03C9FB07F1496D605B58 /* Bundle+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bundle+DawnExtensions.swift"; sourceTree = "<group>"; };
 		8B17D17BE3247F37735CE1AA7473600B /* Dictionary+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+DawnExtensions.swift"; sourceTree = "<group>"; };
-		8DE010698A0BA321EAD8F5B5FE895068 /* DawnTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnTextView.swift; sourceTree = "<group>"; };
 		8ED0F15028AF1E3E9666B02832B2B5E8 /* UIWindow+ANExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIWindow+ANExtensions.swift"; sourceTree = "<group>"; };
 		8F06AB0C62B61330344FA68D12B2000D /* Pods-DawnKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DawnKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E1CBCC80CC24E0E959D9ACCDFB17DC4 /* UITextView+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextView+DawnExtensions.swift"; sourceTree = "<group>"; };
 		A3509E3A908365C8816B153994F41DCA /* NSUIBezierPath+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSUIBezierPath+DawnExtensions.swift"; sourceTree = "<group>"; };
+		A461F06F9AFC89E924606109E24C4839 /* DawnGradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnGradientView.swift; sourceTree = "<group>"; };
 		A4A0FF8346562D565963D6C2C95961B8 /* Timer+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Timer+DawnExtensions.swift"; sourceTree = "<group>"; };
 		A54E880F369D2A8D878741888C0E05A9 /* Pods-DawnKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DawnKit_Tests-umbrella.h"; sourceTree = "<group>"; };
-		A8DD34F4ADAE1600E4FD4FAABDCB845B /* DawnTagContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnTagContainerView.swift; sourceTree = "<group>"; };
 		A9CCA383A647E9CC301CB962B3495D66 /* CGGeometry+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CGGeometry+DawnExtensions.swift"; sourceTree = "<group>"; };
 		AABD63C986CD6164D15AE8BED78221D8 /* FileManager+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "FileManager+DawnExtensions.swift"; sourceTree = "<group>"; };
 		ABAD169AFEC81FC00D71EE0748C3ADBF /* UINavigationController+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UINavigationController+DawnExtensions.swift"; sourceTree = "<group>"; };
+		AC2A9799ED7AC9DAC0455CEB6E58035D /* DawnConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnConstraints.swift; sourceTree = "<group>"; };
+		ADDB775A7FBADD5C5FD5DCC347585552 /* DawnTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnTextField.swift; sourceTree = "<group>"; };
 		AE5033250552800736478AB0942C5A55 /* UIImage+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+DawnExtensions.swift"; sourceTree = "<group>"; };
 		AF05CDAF8C0582C9B08B0F9AE616CCCB /* DawnKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DawnKit-prefix.pch"; sourceTree = "<group>"; };
 		AF614BB9BC218708B3867DF2029C9D62 /* DawnKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DawnKit.debug.xcconfig; sourceTree = "<group>"; };
 		B177FE4E493073CEFE6EC09DD2E9FC2C /* Pods-DawnKit_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-DawnKit_Example"; path = Pods_DawnKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8131AD720FEC688D6B8EC1DBBA483C1 /* DawnLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnLabel.swift; sourceTree = "<group>"; };
 		BC1CFB511FD0C6E15B4DA8A7933A7917 /* Pods-DawnKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DawnKit_Example.modulemap"; sourceTree = "<group>"; };
 		BD6A951413856BCB5207FB60BE4BDA67 /* String+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+DawnExtensions.swift"; sourceTree = "<group>"; };
+		BDE5549422549EECB3D1C94219984080 /* DawnTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnTextView.swift; sourceTree = "<group>"; };
+		C4FBA98325F17737B7C72373433139B7 /* DawnShapeLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnShapeLayer.swift; sourceTree = "<group>"; };
 		C973143335A85B6310D637CA5DC86927 /* DawnKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DawnKit; path = DawnKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C97C92EB29B5B5D20EFB198EC64C18E4 /* DawnConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnConstraints.swift; sourceTree = "<group>"; };
 		CB6512372ABC07479DA9D4061E7616D0 /* UITabBar+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITabBar+DawnExtensions.swift"; sourceTree = "<group>"; };
+		CCAA4B08735A5A03E2CA5942F73F948F /* DawnToast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnToast.swift; sourceTree = "<group>"; };
 		CF9823CBF90FF0A5F3E37006A0C1C2CD /* Pods-DawnKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DawnKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CFECC81359617813F3A11169FFF3F0F7 /* DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnExtensions.swift; sourceTree = "<group>"; };
-		D24F94826C8477FDBE0CA81925393423 /* DawnShapeLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnShapeLayer.swift; sourceTree = "<group>"; };
 		D30D742526E6C8E1A792F785301CBDBE /* NSUIColor+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSUIColor+DawnExtensions.swift"; sourceTree = "<group>"; };
 		D47FCE34D7167288A4381CD9938B95C0 /* DawnKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DawnKit.release.xcconfig; sourceTree = "<group>"; };
-		DBF4491C9F7CC6F4E31583DC59327BBE /* DawnTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnTextField.swift; sourceTree = "<group>"; };
 		E1A93337FA7F336DB9D86696A2D24E39 /* Pods-DawnKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DawnKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		EAB269C4D54F19B80A97D4E93F561D5A /* UIDevice+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIDevice+DawnExtensions.swift"; sourceTree = "<group>"; };
 		EB9B8684ACD444871DB9B26BFF123D3D /* UIViewController+ANExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+ANExtensions.swift"; sourceTree = "<group>"; };
-		F0EB401D0FA47B6CB82936425C91B889 /* DawnButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DawnButton.swift; sourceTree = "<group>"; };
 		FB7166130697AFF77CE0BAC608F0DCAE /* Double+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Double+DawnExtensions.swift"; sourceTree = "<group>"; };
 		FD0C4EE2A0C9C20943826F3E8EABDBF4 /* NSAttributedString+DawnExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+DawnExtensions.swift"; sourceTree = "<group>"; };
-		FD43CA11361848B51A5FABF960D89EF5 /* DawnKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DawnKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FD43CA11361848B51A5FABF960D89EF5 /* DawnKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = DawnKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,23 +270,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5E142465C81609436F018A40E0F3C992 /* DawnUI */ = {
-			isa = PBXGroup;
-			children = (
-				F0EB401D0FA47B6CB82936425C91B889 /* DawnButton.swift */,
-				C97C92EB29B5B5D20EFB198EC64C18E4 /* DawnConstraints.swift */,
-				14CF1845CDD5AD1A99858CDF0711107B /* DawnGradientView.swift */,
-				B8131AD720FEC688D6B8EC1DBBA483C1 /* DawnLabel.swift */,
-				D24F94826C8477FDBE0CA81925393423 /* DawnShapeLayer.swift */,
-				DBF4491C9F7CC6F4E31583DC59327BBE /* DawnTextField.swift */,
-				8DE010698A0BA321EAD8F5B5FE895068 /* DawnTextView.swift */,
-				7B065D79BDBD37235D80145A166EC9B5 /* DawnToast.swift */,
-				A8DD34F4ADAE1600E4FD4FAABDCB845B /* DawnTagContainerView.swift */,
-			);
-			name = DawnUI;
-			path = DawnKit/Classes/DawnUI;
-			sourceTree = "<group>";
-		};
 		5EC638EBB16B862CBC86AC628B6C62B3 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +278,23 @@
 				392AD6AB6F62279D4F93A1EFEF51E5E2 /* README.md */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		66DF133FA3F33787706CB48CCD246BD8 /* DawnUI */ = {
+			isa = PBXGroup;
+			children = (
+				31CEC6A4216A1918AEBBDE55D6B10BDF /* DawnButton.swift */,
+				AC2A9799ED7AC9DAC0455CEB6E58035D /* DawnConstraints.swift */,
+				A461F06F9AFC89E924606109E24C4839 /* DawnGradientView.swift */,
+				0149565A633DD63E0CCC486FE80234D4 /* DawnLabel.swift */,
+				C4FBA98325F17737B7C72373433139B7 /* DawnShapeLayer.swift */,
+				3088D460D0AAC922790CC4F629E28FC2 /* DawnTagContainerView.swift */,
+				ADDB775A7FBADD5C5FD5DCC347585552 /* DawnTextField.swift */,
+				BDE5549422549EECB3D1C94219984080 /* DawnTextView.swift */,
+				CCAA4B08735A5A03E2CA5942F73F948F /* DawnToast.swift */,
+			);
+			name = DawnUI;
+			path = DawnKit/Classes/DawnUI;
 			sourceTree = "<group>";
 		};
 		6F11BE58CB822E63C8C949B3F9C63B61 /* Pods-DawnKit_Example */ = {
@@ -327,7 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				3DBA801A306539AF8272201A1A91CCE7 /* DawnExtensions */,
-				5E142465C81609436F018A40E0F3C992 /* DawnUI */,
+				66DF133FA3F33787706CB48CCD246BD8 /* DawnUI */,
 				5EC638EBB16B862CBC86AC628B6C62B3 /* Pod */,
 				9CC2B5C44968EA92F9F650A21AB2B9C0 /* Support Files */,
 			);
@@ -433,7 +433,7 @@
 			buildConfigurationList = 713B3E93215571CC05BAEA3D7F003AE8 /* Build configuration list for PBXNativeTarget "DawnKit" */;
 			buildPhases = (
 				61ABE99A92F8A7689D1167D400466305 /* Headers */,
-				5946C6ABFDB55CC912C013B35CA3CC8A /* Sources */,
+				7CDB0C198DD06BBEFE39A3FC6C19C052 /* Sources */,
 				CCE1E0EFDB0E6B0C056B8C2AA542D117 /* Frameworks */,
 				DA0E6A0E9E364DF0477CC68C57382D3F /* Resources */,
 			);
@@ -535,58 +535,58 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5946C6ABFDB55CC912C013B35CA3CC8A /* Sources */ = {
+		7CDB0C198DD06BBEFE39A3FC6C19C052 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D2902255E9A0F31F6280B1C8C0838AB /* Array+DawnExtensions.swift in Sources */,
-				AFF95B591CB686E302DF8ECF43BE10ED /* Bundle+DawnExtensions.swift in Sources */,
-				32320F58976B94434F2B340BEA1D697C /* CALayer+DawnExtensions.swift in Sources */,
-				4C14D68DE1C2D7F72F7901D0E2B087FC /* CGGeometry+DawnExtensions.swift in Sources */,
-				5E5F885DCD10C8D4C3B1DF4FF39B11B9 /* Date+DawnExtensions.swift in Sources */,
-				B77D0215FD34AC9AD5D250A0FBC9A15B /* DawnButton.swift in Sources */,
-				33F845498E7577C3B3EB0B9D4FD5BB2A /* DawnConstraints.swift in Sources */,
-				8CD8134DC24A3EE7D912FB9499911605 /* DawnExtensions.swift in Sources */,
-				880D2A95F106033469C707AF848B60E1 /* DawnGradientView.swift in Sources */,
-				ABB2084833F8316F3B3659FC5B5C7ECF /* DawnKit-dummy.m in Sources */,
-				E5D4AAA185CABFE2CC7F68F554900571 /* DawnLabel.swift in Sources */,
-				23A41CF99996D134048A07CE955342ED /* DawnShapeLayer.swift in Sources */,
-				4086DDDA90BDE2E1E223866E77CC88AB /* DawnTextField.swift in Sources */,
-				9749A3707FDDFF5D703185E90A56DE20 /* DawnTextView.swift in Sources */,
-				3D85515DD6EA56A8D476A04896C243CE /* DawnToast.swift in Sources */,
-				E20397E50E5385E73A6118C9DF342739 /* Dictionary+DawnExtensions.swift in Sources */,
-				3DCCD0BBE230C1B7ECA5C39730BB5619 /* DispatchQueue+DawnExtensions.swift in Sources */,
-				762BB0260768A42FEA33F7F9072D995E /* Double+DawnExtensions.swift in Sources */,
-				BBC961271CF778BB45EFBC8589FFCF9F /* FileManager+DawnExtensions.swift in Sources */,
-				BF84E58B4F794A87CAA4738CCE2B7078 /* DawnTagContainerView.swift in Sources */,
-				2C747511645F34C84C965908AAA89538 /* NSAttributedString+DawnExtensions.swift in Sources */,
-				CDDD4895528074F96E79C871B5022DD6 /* NSObject+DawnExtensions.swift in Sources */,
-				A069EF0C275F7E8F4D5B4AE3962610C1 /* NSString+DawnExtensions.swift in Sources */,
-				017A4E4E6897D0E26884A973ECDD5BE4 /* NSUIApplication+DawnExtensions.swift in Sources */,
-				F777A5289C70B13737D727643F8A0813 /* NSUIBezierPath+DawnExtensions.swift in Sources */,
-				827D79BE9A83050E2855FA3FE1242218 /* NSUIColor+DawnExtensions.swift in Sources */,
-				AC978293731FE761C4698D59D6F066A3 /* NSUIFont+DawnExtensions.swift in Sources */,
-				706C404989E83AAAE9FBE2F8FFB36F17 /* NSUIGestureRecognizer+DawnExtensions.swift in Sources */,
-				FF9A28D36043424CC7A834FD741E20DF /* String+DawnExtensions.swift in Sources */,
-				AC73CA272F281A0DB241E933AFDF33CB /* Timer+DawnExtensions.swift in Sources */,
-				7563C868C08C3E8326600447F37B3D55 /* UIAlertController+DawnExtensions.swift in Sources */,
-				1E5ECFE900C680CEEABEAD5B92433487 /* UIButton+DawnExtensions.swift in Sources */,
-				A105A2A2447732C66937F55DA56F51F3 /* UICollectionView+DawnExtensions.swift in Sources */,
-				9E016BAC24C969E0CF89F180800699BD /* UIControl+DawnExtensions.swift in Sources */,
-				B8DBB4DC179935F7E39F50D42EFD4E79 /* UIDevice+DawnExtensions.swift in Sources */,
-				DC293CD1CC57FB8AFC8E5278F3690DEC /* UIImage+DawnExtensions.swift in Sources */,
-				A389B3C774FDF74E380598F95D3574D4 /* UILabel+DawnExtensions.swift in Sources */,
-				4AF7D1629701D3CCA57A125584560B53 /* UINavigationBar+DawnExtensions.swift in Sources */,
-				DC4DF3181E19709C0D891E8C9CB200BF /* UINavigationController+DawnExtensions.swift in Sources */,
-				117A536C50CC69C637DECD2AC27D9774 /* UIScreen+DawnExtensions.swift in Sources */,
-				490A44DD20F151859C26B097900E58A9 /* UIScrollView+DawnExtensions.swift in Sources */,
-				7DBFE6B81538B3EC012FEE20E717E7EB /* UITabBar+DawnExtensions.swift in Sources */,
-				A2AE3039A6EB1D1E4FA5865C32EDA2C8 /* UITableView+DawnExtensions.swift in Sources */,
-				857D564B8B3A8586BB3E91AD06CE24B3 /* UITextField+DawnExtensions.swift in Sources */,
-				46BADB1EC93F6DBFCABE0F5F10E7D991 /* UITextView+DawnExtensions.swift in Sources */,
-				00782AF43DE4525ED62CB11C52F112AE /* UIView+DawnExtensions.swift in Sources */,
-				1B1BCDAB785E9580569A9489A8BFFFBA /* UIViewController+ANExtensions.swift in Sources */,
-				C8C7049A61691BE606D2E4252435930D /* UIWindow+ANExtensions.swift in Sources */,
+				DEBAFA5B60C6BEFCA8ADAC1B5567CA52 /* Array+DawnExtensions.swift in Sources */,
+				41517B4DF433214073B2F82EB68FD6B7 /* Bundle+DawnExtensions.swift in Sources */,
+				8E8B73308ABCCD6F156DE68F3419A1AB /* CALayer+DawnExtensions.swift in Sources */,
+				92A58D5355C3D0F65F82AB0FE1BE0076 /* CGGeometry+DawnExtensions.swift in Sources */,
+				87B2AD3A95A164FDE8E763CE184BCBAC /* Date+DawnExtensions.swift in Sources */,
+				794ECBC7A5400B0B1575E207C9B9CE75 /* DawnButton.swift in Sources */,
+				3E5396F443C1E4C95AE9FA70DD5D3ADB /* DawnConstraints.swift in Sources */,
+				607E4613A0E944808074DA719390774E /* DawnExtensions.swift in Sources */,
+				0252A57DEEAAE459389A23BADC29422A /* DawnGradientView.swift in Sources */,
+				640ED2B456BCE2DC7F8547EA4C970A56 /* DawnKit-dummy.m in Sources */,
+				E8CFB8D3D8066FD66BEAFC3D4B1E483D /* DawnLabel.swift in Sources */,
+				C402C3EA586EBADB1D64588EEF4AD9B2 /* DawnShapeLayer.swift in Sources */,
+				AEC5B9B7C1A226A9FFE48BB5B820A09F /* DawnTagContainerView.swift in Sources */,
+				702417E4B7FCB3E052B145B9384F0A8D /* DawnTextField.swift in Sources */,
+				8FB95151D6A6A8094B48A71FCD339973 /* DawnTextView.swift in Sources */,
+				02EAA82C7125986FD87F6C3D2BF74382 /* DawnToast.swift in Sources */,
+				6D18017D0B7C726C02043C4ED20223D2 /* Dictionary+DawnExtensions.swift in Sources */,
+				408B876B4FDB8CB73D61B8C3AB7A8FC7 /* DispatchQueue+DawnExtensions.swift in Sources */,
+				B63D9D333897D8A2A3CE669EAB2DF505 /* Double+DawnExtensions.swift in Sources */,
+				AAD0407C0CC24268BFA57D1BFF76CE61 /* FileManager+DawnExtensions.swift in Sources */,
+				14472C5F3C5D90501DF8C8ECF15BF209 /* NSAttributedString+DawnExtensions.swift in Sources */,
+				DC4BADDAD83D80EFCC08A8620E0A6515 /* NSObject+DawnExtensions.swift in Sources */,
+				18092E961C611A2969F203C655A245BF /* NSString+DawnExtensions.swift in Sources */,
+				22CF1F00418C79924AC69563AC019055 /* NSUIApplication+DawnExtensions.swift in Sources */,
+				FFBB805CB6FAE558958D89A605C206F1 /* NSUIBezierPath+DawnExtensions.swift in Sources */,
+				196D31C2C7AFD943527138C6589D7679 /* NSUIColor+DawnExtensions.swift in Sources */,
+				A7BCACE4A5C1C5D212887405849F9182 /* NSUIFont+DawnExtensions.swift in Sources */,
+				59E55485ACFCAA914357A478F1E79954 /* NSUIGestureRecognizer+DawnExtensions.swift in Sources */,
+				29EF81D05DE901091822EE1C7C9F6539 /* String+DawnExtensions.swift in Sources */,
+				C7D1EABD42D08D00930B624B028FBEE6 /* Timer+DawnExtensions.swift in Sources */,
+				9C757A9AC1B6BDF0526953CCA7F21D9F /* UIAlertController+DawnExtensions.swift in Sources */,
+				DE1043625E2F2476FA8115993F587EBE /* UIButton+DawnExtensions.swift in Sources */,
+				6EAE7DAA38B6ABBDC7B9D4941553A43D /* UICollectionView+DawnExtensions.swift in Sources */,
+				A3940F300C9F2CCC781A24DE347A5773 /* UIControl+DawnExtensions.swift in Sources */,
+				691A7D2FD5D6227EF2F42423F8BABD10 /* UIDevice+DawnExtensions.swift in Sources */,
+				AE5BF337D0C7BA6989F0A03E38E1DF09 /* UIImage+DawnExtensions.swift in Sources */,
+				DC1C3F90CF52CDC8A6DAA59A8B223DD5 /* UILabel+DawnExtensions.swift in Sources */,
+				3BEBD7590B24E900A11EB7DB7232412A /* UINavigationBar+DawnExtensions.swift in Sources */,
+				2135467A49DEF6B1EED7FE7442700CAF /* UINavigationController+DawnExtensions.swift in Sources */,
+				4FF6FB064D8611F91C4015C494685DB9 /* UIScreen+DawnExtensions.swift in Sources */,
+				525285BD639DFB134611896634753AE8 /* UIScrollView+DawnExtensions.swift in Sources */,
+				1222CC3F0676957A8662550A2742DA89 /* UITabBar+DawnExtensions.swift in Sources */,
+				FF133DB4B44F062232AE231C6EEAE719 /* UITableView+DawnExtensions.swift in Sources */,
+				19B827654F45B58204CA5EA21C7F1964 /* UITextField+DawnExtensions.swift in Sources */,
+				30016F509CA4B1779D4AB72CE35F6E56 /* UITextView+DawnExtensions.swift in Sources */,
+				9A8394076A24795D7CF53A722B7283C0 /* UIView+DawnExtensions.swift in Sources */,
+				38FA6D98A479F478BA987BA9C3C832D5 /* UIViewController+ANExtensions.swift in Sources */,
+				3FC58B846710491E216F1B33D2A3A0B6 /* UIWindow+ANExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,7 +797,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
