@@ -1,6 +1,0 @@
-framework module AnswerExtensions {
-  umbrella header "AnswerExtensions-umbrella.h"
-
-  export *
-  module * { export * }
-}

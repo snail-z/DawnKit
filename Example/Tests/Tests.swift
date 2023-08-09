@@ -1,4 +1,5 @@
 import XCTest
+import DawnKit
 
 class Tests: XCTestCase {
     

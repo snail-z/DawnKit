@@ -1,0 +1,6 @@
+framework module Pods_DawnKit_Example {
+  umbrella header "Pods-DawnKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,16 +1,18 @@
 PODS:
-  - AnswerExtensions (0.1.0)
+  - DawnKit (0.1.0):
+    - DawnKit/DawnExtensions (= 0.1.0)
+  - DawnKit/DawnExtensions (0.1.0)
 
 DEPENDENCIES:
-  - AnswerExtensions (from `../`)
+  - DawnKit (from `../`)
 
 EXTERNAL SOURCES:
-  AnswerExtensions:
+  DawnKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AnswerExtensions: 4a905eab900460fd4a04b5d0b0ba0f61906b588c
+  DawnKit: 82f30938970287add4528c18f7c6c42592cbb21a
 
-PODFILE CHECKSUM: 413301ec70329e8477fc78048c5c7c09773d7e8d
+PODFILE CHECKSUM: 86f834811b7f14f10869c45495074446434c2b9e
 
 COCOAPODS: 1.11.3
