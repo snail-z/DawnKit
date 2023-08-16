@@ -30,8 +30,6 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '11.0'
   s.swift_version = '5.1'
-
-  s.source_files = 'DawnKit/Classes/**/*'
   
   s.subspec 'DawnExtensions' do |ss|
       ss.source_files = 'DawnKit/Classes/DawnExtensions/**/*'

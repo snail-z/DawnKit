@@ -43,6 +43,18 @@ public extension UIViewController {
         self.view.removeFromSuperview()
     }
     
+    /// 查找目标控制器
+    func findTargetController<T>(_ cls: T.Type) -> T? {
+        if let viewController = self as? T {
+            return viewController
+        } else if let viewController = self as? UITabBarController {
+            return viewController.selectedViewController?.findTargetController(cls)
+        } else if let viewController = self as? UINavigationController {
+            return viewController.topViewController?.findTargetController(cls)
+        }
+        return nil
+    }
+    
     /// 添加背景图
     @discardableResult
     func addBackgroundImage(_ named: String) -> UIView? {

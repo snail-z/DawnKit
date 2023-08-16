@@ -1,6 +1,6 @@
 //
-//  DawnConstraints.swift
-//  DawnConstraints
+//  DWNLayoutKit.swift.swift
+//  DawnLayoutKit
 //
 //  Created by zhang on 2020/2/26.
 //  Copyright © 2020 snail-z. All rights reserved.
@@ -18,8 +18,8 @@ public struct DawnViewExtensions<Base> {
 public protocol DawnViewExtensionsCompatible {}
 
 public extension DawnViewExtensionsCompatible {
-    static var dw: DawnViewExtensions<Self>.Type { DawnViewExtensions<Self>.self }
-    var dw: DawnViewExtensions<Self> { get{ DawnViewExtensions(self) } set{} }
+    static var dwn: DawnViewExtensions<Self>.Type { DawnViewExtensions<Self>.self }
+    var dwn: DawnViewExtensions<Self> { get{ DawnViewExtensions(self) } set{} }
 }
 
 extension UIView: DawnViewExtensionsCompatible {}
@@ -236,7 +236,6 @@ public protocol DawnConstraintRelatableTarget {}
 extension DawnConstraintRelatableTarget {
     
     internal func constantTargetValue(for layoutAttribute: NSLayoutConstraint.Attribute) -> CGFloat {
-
         if let value = self as? Int { return CGFloat(value) }
         
         if let value = self as? UInt { return CGFloat(value) }

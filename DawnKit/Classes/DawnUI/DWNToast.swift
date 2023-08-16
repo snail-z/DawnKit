@@ -1,5 +1,5 @@
 //
-//  DawnToast.swift
+//  DWNToast.swift
 //  DawnUI
 //
 //  Created by zhang on 2020/2/26.
@@ -10,13 +10,13 @@
 
 import UIKit
 
-/// Toast全局管理者
-public class DawnToastManage: NSObject {
+/// Toast全局配置
+public class DWNToastConfig: NSObject {
     
-    public static let shared: DawnToastManage = DawnToastManage()
+    public static let shared: DWNToastConfig = DWNToastConfig()
     
     /// 设置Toast外观样式
-    public var style: DawnToastStyle = DawnToastStyle()
+    public var style: DWNToastStyle = DWNToastStyle()
     
     /// Toast图片位置
     public enum ImagePlacement: Int {
@@ -36,7 +36,7 @@ public class DawnToastManage: NSObject {
 }
 
 /// Toast样式
-public class DawnToastStyle: NSObject {
+public class DWNToastStyle: NSObject {
     
     /// 背景色
     public var backgroundColor: UIColor = UIColor.black.withAlphaComponent(0.9)
@@ -108,9 +108,9 @@ public extension DawnViewExtensions where Base: UIView {
                    image: UIImage?,
                    delay: TimeInterval = 2,
                    rotateAnimated: Bool = false,
-                   placement: DawnToastManage.ImagePlacement = DawnToastManage.shared.placement,
-                   position: DawnToastManage.ToastPosition = DawnToastManage.shared.position,
-                   style: DawnToastStyle = DawnToastManage.shared.style) {
+                   placement: DWNToastConfig.ImagePlacement = DWNToastConfig.shared.placement,
+                   position: DWNToastConfig.ToastPosition = DWNToastConfig.shared.position,
+                   style: DWNToastStyle = DWNToastConfig.shared.style) {
         if let msg = message, let img = image {
             return _perfectToast(text: msg, image: img, delay: delay, rotateAnimated: rotateAnimated, placement: placement, position: position, style: style)
         }
@@ -128,8 +128,8 @@ public extension DawnViewExtensions where Base: UIView {
     func showToast(image: UIImage?,
                    delay: TimeInterval = 2,
                    rotateAnimated: Bool = false, /// 是否启用旋转动画
-                   position: DawnToastManage.ToastPosition = DawnToastManage.shared.position,
-                   style: DawnToastStyle = DawnToastManage.shared.style) {
+                   position: DWNToastConfig.ToastPosition = DWNToastConfig.shared.position,
+                   style: DWNToastStyle = DWNToastConfig.shared.style) {
         guard let img = image else { return }
         _imageToast(image: img, delay: delay, rotateAnimated: rotateAnimated, position: position, style: style)
     }
@@ -137,31 +137,31 @@ public extension DawnViewExtensions where Base: UIView {
     /// 仅文本样式Toast (delay设置为0则不自动隐藏)
     func showToast(message: String?,
                    delay: TimeInterval = 2,
-                   position: DawnToastManage.ToastPosition = DawnToastManage.shared.position,
-                   style: DawnToastStyle = DawnToastManage.shared.style) {
+                   position: DWNToastConfig.ToastPosition = DWNToastConfig.shared.position,
+                   style: DWNToastStyle = DWNToastConfig.shared.style) {
         guard let msg = message else { return }
         _messageToast(message: msg, delay: delay, position: position, style: style)
     }
     
     /// 隐藏Toast
     func hideToast() {
-        guard let activeToast = base.pk_activeToasts.firstObject as? UIView else { return }
+        guard let activeToast = base.dwn_activeToasts.firstObject as? UIView else { return }
         _hideToast(activeToast)
     }
     
     /// 隐藏所有Toast
     func hideAllToasts() {
-        base.pk_activeToasts.compactMap { $0 as? UIView } .forEach { _hideToast($0) }
+        base.dwn_activeToasts.compactMap { $0 as? UIView } .forEach { _hideToast($0) }
     }
     
     // MARK: - private -
     
-    private func _messageToast(message: String, delay: TimeInterval, position: DawnToastManage.ToastPosition, style: DawnToastStyle) {
+    private func _messageToast(message: String, delay: TimeInterval, position: DWNToastConfig.ToastPosition, style: DWNToastStyle) {
         let contentView = UIView()
         contentView.isUserInteractionEnabled = false
         contentView.addShadow(radius: style.shadowRadius, opacity: 1, offset: .zero, color: style.shadowColor)
         base.addSubview(contentView)
-        base.pk_activeToasts.add(contentView)
+        base.dwn_activeToasts.add(contentView)
         
         let hud = UIView()
         hud.backgroundColor = style.backgroundColor
@@ -178,7 +178,7 @@ public extension DawnViewExtensions where Base: UIView {
         label.preferredMaxLayoutWidth = style.textMaxLayoutWidth
         hud.addSubview(label)
         
-        contentView.dw.makeConstraints { (make) in
+        contentView.dwn.makeConstraints { (make) in
             if let scrollView = self.base as? UIScrollView {
                 let insets = scrollView.contentInset
                 make.left.equalToSuperview().offset(-insets.left)
@@ -191,14 +191,14 @@ public extension DawnViewExtensions where Base: UIView {
             }
         }
         
-        label.dw.makeConstraints { (make) in
+        label.dwn.makeConstraints { (make) in
             make.center.equalToSuperview()
             if style.textFixedLayoutWidth > 0 {
                 make.width.equalTo(style.textFixedLayoutWidth)
             }
         }
         
-        hud.dw.makeConstraints { (make) in
+        hud.dwn.makeConstraints { (make) in
             let insets = style.contentEdgeInsets
             make.left.equalTo(label).offset(-insets.left)
             make.right.equalTo(label).offset(insets.right)
@@ -220,12 +220,12 @@ public extension DawnViewExtensions where Base: UIView {
         }
     }
     
-    private func _imageToast(image: UIImage, delay: TimeInterval, rotateAnimated: Bool, position: DawnToastManage.ToastPosition, style: DawnToastStyle) {
+    private func _imageToast(image: UIImage, delay: TimeInterval, rotateAnimated: Bool, position: DWNToastConfig.ToastPosition, style: DWNToastStyle) {
         let contentView = UIView()
         contentView.isUserInteractionEnabled = false
         contentView.addShadow(radius: style.shadowRadius, opacity: 1, offset: .zero, color: style.shadowColor)
         base.addSubview(contentView)
-        base.pk_activeToasts.add(contentView)
+        base.dwn_activeToasts.add(contentView)
         
         let hud = UIView()
         hud.backgroundColor = style.backgroundColor
@@ -242,7 +242,7 @@ public extension DawnViewExtensions where Base: UIView {
         }
         hud.addSubview(imgView)
             
-        contentView.dw.makeConstraints { (make) in
+        contentView.dwn.makeConstraints { (make) in
             if let scrollView = self.base as? UIScrollView {
                 let insets = scrollView.contentInset
                 make.left.equalToSuperview().offset(-insets.left)
@@ -255,14 +255,14 @@ public extension DawnViewExtensions where Base: UIView {
             }
         }
         
-        imgView.dw.makeConstraints { (make) in
+        imgView.dwn.makeConstraints { (make) in
             if style.imageFixedSize.isValid {
                 make.size.equalTo(style.imageFixedSize)
             }
             make.center.equalToSuperview()
         }
         
-        hud.dw.makeConstraints { (make) in
+        hud.dwn.makeConstraints { (make) in
             let insets = style.contentEdgeInsets
             make.left.equalTo(imgView).offset(-insets.left)
             make.right.equalTo(imgView).offset(insets.right)
@@ -288,7 +288,7 @@ public extension DawnViewExtensions where Base: UIView {
         }
     }
     
-    private func animationOptionsValue(for tag: Int) -> DawnToastStyle.AnimationOptions{
+    private func animationOptionsValue(for tag: Int) -> DWNToastStyle.AnimationOptions{
         switch tag {
         case 102: return .drop
         case 103: return .transform(scale: 0.75)
@@ -296,7 +296,7 @@ public extension DawnViewExtensions where Base: UIView {
         }
     }
     
-    private func tagValue(for options: DawnToastStyle.AnimationOptions) -> Int {
+    private func tagValue(for options: DWNToastStyle.AnimationOptions) -> Int {
         switch options {
         case .fade: return 101
         case .drop: return 102
@@ -305,15 +305,15 @@ public extension DawnViewExtensions where Base: UIView {
     }
     
     private func _perfectToast(text: String, image: UIImage, delay: TimeInterval, rotateAnimated: Bool,
-                               placement: DawnToastManage.ImagePlacement, position: DawnToastManage.ToastPosition, style: DawnToastStyle) {
+                               placement: DWNToastConfig.ImagePlacement, position: DWNToastConfig.ToastPosition, style: DWNToastStyle) {
         if style.alwaysOnlyOneToast {
-            guard base.pk_activeToasts.count < 1 else { return }
+            guard base.dwn_activeToasts.count < 1 else { return }
         }
         
         let contentView = UIView()
         contentView.isUserInteractionEnabled = !style.isRespondWhenDisplayed
         base.addSubview(contentView)
-        base.pk_activeToasts.add(contentView)
+        base.dwn_activeToasts.add(contentView)
         
         let shadowHud = UIView()
         shadowHud.backgroundColor = .clear
@@ -326,12 +326,12 @@ public extension DawnViewExtensions where Base: UIView {
         hud.addShadow(radius: 30, opacity: 1, offset: .zero, color: style.shadowColor)
         contentView.addSubview(hud)
         
-        let button = DawnButton()
+        let button = DWNButton()
         button.isUserInteractionEnabled = false
         button.layer.cornerRadius = style.cornerRadius
         button.imageFixedSize = style.imageFixedSize
         button.imageAndTitleSpacing = style.imageAndTextSpacing
-        button.imagePlacement = DawnButton.ImagePlacement(rawValue: placement.rawValue)!
+        button.imagePlacement = DWNButton.ImagePlacement(rawValue: placement.rawValue)!
         let attrText = NSMutableAttributedString(string: text)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = style.lineSpacing
@@ -351,7 +351,7 @@ public extension DawnViewExtensions where Base: UIView {
             button.imageView.image = image
         }
     
-        contentView.dw.makeConstraints { (make) in
+        contentView.dwn.makeConstraints { (make) in
             if let scrollView = self.base as? UIScrollView {
                 let insets = scrollView.contentInset
                 make.left.equalToSuperview().offset(-insets.left)
@@ -364,14 +364,14 @@ public extension DawnViewExtensions where Base: UIView {
             }
         }
         
-        button.dw.makeConstraints { (make) in
+        button.dwn.makeConstraints { (make) in
             make.center.equalToSuperview()
             if style.textFixedLayoutWidth > 0 {
                 make.width.equalTo(style.textFixedLayoutWidth)
             }
         }
         
-        hud.dw.makeConstraints { (make) in
+        hud.dwn.makeConstraints { (make) in
             let inset = style.contentEdgeInsets
             make.left.lessThanOrEqualTo(button).inset(inset.left)
             make.right.greaterThanOrEqualTo(button).offset(inset.right)
@@ -379,8 +379,8 @@ public extension DawnViewExtensions where Base: UIView {
             make.bottom.greaterThanOrEqualTo(button).offset(inset.bottom)
         }
         
-        shadowHud.dw.makeConstraints { make in
-            make.edges.equalTo(hud.dw.edges)
+        shadowHud.dwn.makeConstraints { make in
+            make.edges.equalTo(hud.dwn.edges)
         }
         
         _adjustToast(hud, position)
@@ -442,31 +442,31 @@ public extension DawnViewExtensions where Base: UIView {
         }
     }
     
-    private func _adjustToast(_ toast: UIView, _ position: DawnToastManage.ToastPosition) {
+    private func _adjustToast(_ toast: UIView, _ position: DWNToastConfig.ToastPosition) {
         switch position {
         case .top(offset: let value):
-            toast.dw.makeConstraints { (make) in
+            toast.dwn.makeConstraints { (make) in
                 make.centerX.equalToSuperview()
                 make.top.equalToSuperview().offset(value)
             }
         case .center(offset: let value):
-            toast.dw.makeConstraints { (make) in
+            toast.dwn.makeConstraints { (make) in
                 make.centerX.equalToSuperview()
                 make.centerY.equalToSuperview().offset(value)
             }
         case .bottom(offset: let value):
-            toast.dw.makeConstraints { (make) in
+            toast.dwn.makeConstraints { (make) in
                 make.centerX.equalToSuperview()
                 make.bottom.equalToSuperview().offset(value)
             }
         }
     }
     
-    private func _hideToast(_ toast: UIView, style: DawnToastStyle) {
-        guard base.pk_activeToasts.contains(toast) else { return }
+    private func _hideToast(_ toast: UIView, style: DWNToastStyle) {
+        guard base.dwn_activeToasts.contains(toast) else { return }
         let closure: ((Bool) -> Void)? = { _ in
             toast.removeFromSuperview()
-            self.base.pk_activeToasts.remove(toast)
+            self.base.dwn_activeToasts.remove(toast)
         }
         switch style.animationOptions {
         case .fade:
@@ -487,7 +487,7 @@ public extension DawnViewExtensions where Base: UIView {
     }
     
     private func _hideToast(_ toast: UIView) {
-        guard base.pk_activeToasts.contains(toast) else { return }
+        guard base.dwn_activeToasts.contains(toast) else { return }
         _sshideToast(toast, options: animationOptionsValue(for: toast.tag), duration: 0.25)
         
         UIView.animate(withDuration: 0.15, delay: 0, options: [.curveEaseIn, .beginFromCurrentState], animations: {
@@ -496,18 +496,18 @@ public extension DawnViewExtensions where Base: UIView {
             toast.transform = CGAffineTransform.init(translationX: 0, y: -100)
         }) { _ in
             toast.removeFromSuperview()
-            self.base.pk_activeToasts.remove(toast)
+            self.base.dwn_activeToasts.remove(toast)
         }
     }
     
-    private func _sshideToast(_ toast: UIView, options: DawnToastStyle.AnimationOptions, duration: TimeInterval) {
-        guard base.pk_activeToasts.contains(toast) else {
+    private func _sshideToast(_ toast: UIView, options: DWNToastStyle.AnimationOptions, duration: TimeInterval) {
+        guard base.dwn_activeToasts.contains(toast) else {
             return
         }
         
         let closure: ((Bool) -> Void)? = { _ in
             toast.removeFromSuperview()
-            self.base.pk_activeToasts.remove(toast)
+            self.base.dwn_activeToasts.remove(toast)
         }
         switch options {
         case .fade:
@@ -532,7 +532,7 @@ private var UIViewAssociatedPKToastViewsKey: Void?
 
 private extension UIView {
     
-    var pk_activeToasts: NSMutableArray {
+    var dwn_activeToasts: NSMutableArray {
         get {
             if let activeToasts = objc_getAssociatedObject(self, &UIViewAssociatedPKToastViewsKey) as? NSMutableArray {
                 return activeToasts

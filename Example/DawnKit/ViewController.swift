@@ -15,10 +15,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let btn = DawnButton()
+        let btn = DWNButton()
         btn.backgroundColor = .random(.gentle)
         view.addSubview(btn)
-        btn.dw.makeConstraints { make in
+        btn.dwn.makeConstraints { make in
             make.top.equalTo(200)
             make.left.equalTo(50)
             make.right.equalToSuperview().inset(50)

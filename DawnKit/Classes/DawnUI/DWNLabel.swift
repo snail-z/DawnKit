@@ -1,5 +1,5 @@
 //
-//  DawnLabel.swift
+//  DWNLabel.swift
 //  DawnUI
 //
 //  Created by zhanghao on 2022/10/3.
@@ -13,7 +13,7 @@ import UIKit
 *  2. 提供调整文本竖直方向对齐样式 (contentVerticalAlignment)
 *  3. 支持调整 cornerRadius 始终保持为高度的 1/2 (adjustsRoundedCornersAutomatically)
 */
-@objc open class DawnLabel: UILabel {
+@objc open class DWNLabel: UILabel {
 
     /// 设置文本内边距
     @objc public var contentEdgeInsets: UIEdgeInsets = .zero {

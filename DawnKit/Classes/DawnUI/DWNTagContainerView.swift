@@ -1,5 +1,5 @@
 //
-//  DawnTagContainerView.swift
+//  DWNTagContainerView.swift
 //  DawnUI
 //
 //  Created by zhang on 2023/2/23.
@@ -11,13 +11,13 @@ import UIKit
 /**
 *  1. 类似`UIStackView`用法，根据子视图自撑开，自动排列换行 「子视图内须支持`sizeThatFits`方法」
 *  2. 支持子视图隐藏显示，动态布局，无需调整约束
- 「注意：若在UITableViewCell自适应高度中使用到MATagContainerView，
-   外部可以二次视图封装提前约束好尺寸，参考MAWrapTagView使用 -
+ 「注意：若在UITableViewCell自适应高度中使用到DWNTagContainerView，
+   外部可以二次视图封装提前约束好尺寸，参考DWNTagView使用 -
    由于UITableView.automaticDimension自适应高度，内部子视图约束会异步调用updateViewConstraints刷新布局，
-   而MATagContainerView内部子视图也会异步调用layoutIfNeeded刷新布局，
+   而DWNTagContainerView内部子视图也会异步调用layoutIfNeeded刷新布局，
    所以计算内容后的大小可能会晚于UITableView.automaticDimension的高度，导致不能有效撑开内容布局」
  */
-@objc open class DawnTagContainerView: UIView {
+@objc open class DWNTagContainerView: UIView {
 
     /// 设置水平方向间距
     @objc public var horizontalSpacing: CGFloat = .zero {

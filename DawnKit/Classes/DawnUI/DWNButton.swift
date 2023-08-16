@@ -1,5 +1,5 @@
 //
-//  DawnButton.swift
+//  DWNButton.swift
 //  DawnUI
 //
 //  Created by zhanghao on 2022/10/1.
@@ -21,7 +21,7 @@ import UIKit
 *  9. 支持 Auto Layout 自撑开 (以上设置可根据内容自适应)
 * 10. 支持扩增手势事件的响应区域 (touchResponseInsets)
 */
-@objc open class DawnButton: UIView {
+@objc open class DWNButton: UIView {
     
     /// 图片与文字布局位置
     @objc public enum ImagePlacement: Int {
@@ -176,14 +176,14 @@ import UIKit
         let inset = contentEdgeInsets
         switch contentHorizontalAlignment {
         case .nature, .spaceBetween:
-            stackView.dw.remakeConstraints { make in
+            stackView.dwn.remakeConstraints { make in
                 make.top.equalTo(inset.top)
                 make.bottom.equalToSuperview().inset(inset.bottom)
                 make.left.equalTo(inset.left)
                 make.right.equalToSuperview().inset(inset.right)
             }
         case .center:
-            stackView.dw.remakeConstraints { make in
+            stackView.dwn.remakeConstraints { make in
                 make.top.equalTo(inset.top)
                 make.bottom.equalToSuperview().inset(inset.bottom)
                 make.centerX.equalToSuperview()
@@ -191,14 +191,14 @@ import UIKit
                 make.right.lessThanOrEqualToSuperview().inset(inset.right)
             }
         case .left:
-            stackView.dw.remakeConstraints { make in
+            stackView.dwn.remakeConstraints { make in
                 make.top.equalTo(inset.top)
                 make.bottom.equalToSuperview().inset(inset.bottom)
                 make.left.equalTo(inset.left)
                 make.right.lessThanOrEqualToSuperview().inset(inset.right)
             }
         case .right:
-            stackView.dw.remakeConstraints { make in
+            stackView.dwn.remakeConstraints { make in
                 make.top.equalTo(inset.top)
                 make.bottom.equalToSuperview().inset(inset.bottom)
                 make.left.greaterThanOrEqualToSuperview().offset(inset.left)
@@ -211,14 +211,14 @@ import UIKit
         let inset = contentEdgeInsets
         switch contentVerticalAlignment {
         case .nature, .spaceBetween:
-            stackView.dw.remakeConstraints { make in
+            stackView.dwn.remakeConstraints { make in
                 make.left.equalTo(inset.left)
                 make.right.equalToSuperview().inset(inset.right)
                 make.top.equalTo(inset.top)
                 make.bottom.equalToSuperview().inset(inset.bottom)
             }
         case .center:
-            stackView.dw.remakeConstraints { make in
+            stackView.dwn.remakeConstraints { make in
                 make.left.equalTo(inset.left)
                 make.right.equalToSuperview().inset(inset.right)
                 make.centerY.equalToSuperview()
@@ -226,14 +226,14 @@ import UIKit
                 make.bottom.lessThanOrEqualToSuperview().inset(inset.bottom)
             }
         case .top:
-            stackView.dw.remakeConstraints { make in
+            stackView.dwn.remakeConstraints { make in
                 make.left.equalTo(inset.left)
                 make.right.equalToSuperview().inset(inset.right)
                 make.top.equalTo(inset.top)
                 make.bottom.lessThanOrEqualToSuperview().inset(inset.bottom)
             }
         case .bottom:
-            stackView.dw.remakeConstraints { make in
+            stackView.dwn.remakeConstraints { make in
                 make.left.equalTo(inset.left)
                 make.right.equalToSuperview().inset(inset.right)
                 make.top.greaterThanOrEqualToSuperview().offset(inset.top)
@@ -243,7 +243,7 @@ import UIKit
     }
     
     private func imageFixedSizeUpdates() {
-        imageView.dw.updateConstraints { make in
+        imageView.dwn.updateConstraints { make in
             make.size.equalTo(imageFixedSize)
         }
     }

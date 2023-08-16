@@ -1,5 +1,5 @@
 //
-//  DawnTextView.swift
+//  DWNTextView.swift
 //  DawnUI
 //
 //  Created by zhanghao on 2022/10/1.
@@ -17,7 +17,7 @@ import UIKit
 *  5. 输入框 contentSize 改变回调 - didContentSizeChanged(oldSize, newSize)
 *  6. 输入框变化增加删除事件 - deleteBackward
 */
-@objc open class DawnTextView: UITextView, UITextViewDelegate {
+@objc open class DWNTextView: UITextView, UITextViewDelegate {
     
     /// 设置占位文本
     @objc public var placeholder: String? {

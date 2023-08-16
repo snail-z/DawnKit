@@ -1,9 +1,9 @@
 PODS:
-  - DawnKit (1.0.1):
-    - DawnKit/DawnExtensions (= 1.0.1)
-    - DawnKit/DawnUI (= 1.0.1)
-  - DawnKit/DawnExtensions (1.0.1)
-  - DawnKit/DawnUI (1.0.1):
+  - DawnKit (1.0.2):
+    - DawnKit/DawnExtensions (= 1.0.2)
+    - DawnKit/DawnUI (= 1.0.2)
+  - DawnKit/DawnExtensions (1.0.2)
+  - DawnKit/DawnUI (1.0.2):
     - DawnKit/DawnExtensions
 
 DEPENDENCIES:
@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DawnKit: 8519e815e974a92475f4ac24c506e0b88dac7712
+  DawnKit: 7c66bb46628fd22116ee3cd44c0d5fc5099cd563
 
 PODFILE CHECKSUM: 86f834811b7f14f10869c45495074446434c2b9e
 

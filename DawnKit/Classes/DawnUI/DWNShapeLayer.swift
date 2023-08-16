@@ -1,5 +1,5 @@
 //
-//  DawnShapeLayer.swift
+//  DWNShapeLayer.swift
 //  DawnUI
 //
 //  Created by zhang on 2022/10/4.
@@ -12,7 +12,7 @@ import UIKit
 *  1. 默认去除CALayer的隐式动画
 *  2. 切换path时可通过动画转换显示
 */
-@objc open class DawnShapeLayer: CAShapeLayer {
+@objc open class DWNShapeLayer: CAShapeLayer {
     
     /// 是否禁止隐式动画，默认true
     @objc public var disableActions: Bool = true

@@ -1,5 +1,5 @@
 //
-//  DawnTextView.swift
+//  DWNTextField.swift
 //  DawnUI
 //
 //  Created by zhanghao on 2022/10/1.
@@ -16,7 +16,7 @@ import UIKit
 *  4. 支持输入框文本边缘留白 (textEdgeInsets)
 *  5. 增加键盘删除按钮的响应事件 - MATextField.deleteBackward
 */
-@objc open class DawnTextField: UITextField {
+@objc open class DWNTextField: UITextField {
     
     /// 左视图边缘留白
     @objc public var leftViewPadding: CGFloat = 0
@@ -82,12 +82,12 @@ import UIKit
 
     open override func deleteBackward() {
         super.deleteBackward()
-        sendActions(for: DawnTextField.deleteBackward)
+        sendActions(for: DWNTextField.deleteBackward)
     }
     
     /// 键盘删除按钮的响应事件
     ///
-    ///     Usage: textField.addTarget(self, action: #selector(textFieldDeleteBackward(_:)), for: MATextField.deleteBackward)
+    ///     Usage: textField.addTarget(self, action: #selector(textFieldDeleteBackward(_:)), for: DWNTextField.deleteBackward)
     @objc public static var deleteBackward: UIControl.Event {
         return UIControl.Event(rawValue: 1026)
     }

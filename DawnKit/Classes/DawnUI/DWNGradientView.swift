@@ -1,5 +1,5 @@
 //
-//  DawnGradientView.swift
+//  DWNGradientView.swift
 //  DawnUI
 //
 //  Created by zhanghao on 2022/10/3.
@@ -12,7 +12,7 @@ import UIKit
 *  1. 提供自定义线性渐变方向和颜色
 *  2. 提供设置线性渐变路径
 */
-@objc open class DawnGradientView: UIView {
+@objc open class DWNGradientView: UIView {
     
     /// 线性渐变方向
     @objc public enum GradientDirection: Int {
@@ -101,8 +101,8 @@ import UIKit
         gradientLayer.colors = colors?.map { $0?.cgColor ?? UIColor.black.cgColor }
     }
     
-    private lazy var maskLayer: DawnShapeLayer = {
-        let maskLayer = DawnShapeLayer()
+    private lazy var maskLayer: DWNShapeLayer = {
+        let maskLayer = DWNShapeLayer()
         maskLayer.fillColor = UIColor.white.cgColor
         maskLayer.strokeColor = UIColor.clear.cgColor
         maskLayer.lineJoin  = .bevel
