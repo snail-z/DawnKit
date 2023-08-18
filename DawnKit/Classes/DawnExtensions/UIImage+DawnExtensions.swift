@@ -12,32 +12,22 @@ import UIKit
 
 public extension UIImage {
     
-    /// 图像宽度与高度的比值
-    var ratioOfWidthToHeight: CGFloat {
-        return size.width / size.height
-    }
-    
-    /// 图像高度与宽度的比值
-    var ratioOfHeightToWidth: CGFloat {
-        return size.height / size.width
-    }
-    
     /// 根据指定的宽度获取与原图等比例大小的size
-    func sizeOfScaled(width: CGFloat) -> CGSize {
+    func sizeScaled(width: CGFloat) -> CGSize {
         guard width > 0, !size.equalTo(.zero) else { return .zero }
         let factor = size.height / size.width
         return CGSize(width: width, height: width * factor)
     }
     
     /// 根据指定的高度获取与原图等比例大小的size
-    func sizeOfScaled(height: CGFloat) -> CGSize {
+    func sizeScaled(height: CGFloat) -> CGSize {
         guard height > 0, !size.equalTo(.zero) else { return .zero }
         let factor = size.width / size.height
         return CGSize(width: height * factor, height: height)
     }
     
     /// 根据颜色返回一个纯色的图像
-    static func image(with color: UIColor?, size: CGSize = CGSize(width: 1, height: 1)) -> UIImage? {
+    static func image(_ color: UIColor?, size: CGSize = CGSize(width: 1, height: 1)) -> UIImage? {
         guard let cgColor = color?.cgColor, size.width > 0, size.height > 0 else { return nil }
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
@@ -125,7 +115,7 @@ public extension UIImage {
     }
     
     /// 根据指定的颜色填充图像并返回新图像
-    func filled(withColor color: UIColor?) -> UIImage {
+    func filled(_ color: UIColor?) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
         color?.setFill()
         guard let context = UIGraphicsGetCurrentContext() else { return self }
@@ -183,9 +173,9 @@ public extension UIImage {
     }
     
     /// 根据图片名称生成不同尺寸的占位图
-    static func placeholderImage(with desc: String, size: CGSize, backgroundColor: UIColor? = UIColor.rgb(same: 245)) -> UIImage? {
+    static func placeholder(_ desc: String, size: CGSize, backgroundColor: UIColor? = UIColor.rgb(same: 245)) -> UIImage? {
         guard let icon = UIImage(named: desc) else { return nil }
-        return placeholderImage(with: icon, size: size, backgroundColor: backgroundColor)
+        return placeholder(icon, size: size, backgroundColor: backgroundColor)
     }
     
     /// 根据给定图片生成不同尺寸的占位图
@@ -196,15 +186,15 @@ public extension UIImage {
     ///   - backgroundColor: 背景色
     ///
     /// - Returns: 占位图
-    static func placeholderImage(with image: UIImage, size: CGSize, backgroundColor: UIColor? = UIColor.rgb(same: 245)) -> UIImage? {
+    static func placeholder(_ image: UIImage, size: CGSize, backgroundColor: UIColor? = UIColor.rgb(same: 245)) -> UIImage? {
         guard !image.size.equalTo(.zero), size.isValid else { return nil }
        
         /**
         * - image的物理尺寸大小等于 image.size * image.scale
         * - image.scale表示缩小因子，屏幕的scale表示放大因子
-        * - image.scale这个值的获取就是简单的通过<@2x>这个后缀的数字获得的，
-        *   比如把一个<@3x>图片的<@3x>的后缀删掉，则输出image.scale是1，而不是3，
-        *   因此图片命名需要以<@2x>/<@3x>结尾，得到的image.scale才是正确的，
+        * - image.scale这个值的获取就是简单的通过`<@2x>`这个后缀的数字获得的，
+        *   比如把一个`<@3x>`图片的`<@3x>`的后缀删掉，则输出image.scale是1，而不是3，
+        *   因此图片命名需要以`<@2x>/<@3x>`结尾，得到的image.scale才是正确的，
         *   这样可以保证在不同分辨率的机型上读取适合的image以节省内存
         */
         let pathURL = URL(fileURLWithPath: NSHomeDirectory() + "/Library/Caches/MakePlaceholder")
@@ -253,7 +243,7 @@ public extension UIImage {
             let pngRepresentation = placeholderImage!.pngData()
             try? pngRepresentation?.write(to: fileURL, options: .atomic)
         } catch let error {
-            print("-TakePlaceholder- create directory error: \(error)")
+            print("-UIImage-TakePlaceholder- create directory error: \(error)")
         }
         return placeholderImage
     }
@@ -276,25 +266,26 @@ public extension UIImage {
         case rightTopToLeftBottom
         /// 从右下到左上渐变
         case rightBottomToLeftTop
+        /// 自定义起始位置
+        case startToEnd(_ p1: (CGFloat, CGFloat), _ p2: (CGFloat, CGFloat))
     }
     
-    /// 根据颜色和方向返回渐变色图像，`[Any]` 为十六进制字符串或十六进制数值
-    static func gradientImage(with hexValues: [Any], size: CGSize, direction: GradientDirection = .leftToRight) -> UIImage? {
+    /// 根据颜色和方向返回线性渐变色图像，`hexValues`为十六进制字符串或十六进制数值
+    static func gradient(hexValues: [Any], size: CGSize, direction: GradientDirection = .leftToRight) -> UIImage? {
         if let ints = hexValues as? [Int] {
             let values = ints.map({ UIColor.hex($0) })
-            return gradientImage(with: values, size: size, direction: direction)
+            return gradient(values, size: size, direction: direction)
         } else if let strings = hexValues as? [String] {
             let values = strings.map({ (UIColor.hex($0) ?? .clear) })
-            return gradientImage(with: values, size: size, direction: direction)
+            return gradient(values, size: size, direction: direction)
         } else {
             return nil
         }
     }
     
-    /// 根据颜色和方向返回渐变色图像
-    static func gradientImage(with colors: [UIColor?], size: CGSize, direction: GradientDirection = .leftToRight) -> UIImage? {
+    /// 根据颜色和方向返回线性渐变色图像
+    static func gradient(_ colors: [NSUIColor?], size: CGSize, direction: GradientDirection = .leftToRight) -> UIImage? {
         guard !colors.isEmpty, size.isValid else { return nil }
-        
         var startPoint = CGPoint.zero
         var endPoint = CGPoint.zero
         switch direction {
@@ -322,6 +313,9 @@ public extension UIImage {
         case .rightBottomToLeftTop:
             startPoint = CGPoint(x: size.width, y: size.height)
             endPoint = CGPoint(x: 0, y: 0)
+        case .startToEnd(let p1, let p2):
+            startPoint = CGPoint(x: p1.0, y: p1.1)
+            endPoint = CGPoint(x: p2.0, y: p2.1)
         }
         
         let cgColors: [CGColor] = colors.map({ $0?.cgColor ?? UIColor.black.cgColor })
@@ -338,6 +332,55 @@ public extension UIImage {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
+    }
+    
+    /// 根据设置返回渐变色图像(可设置圆角边框等)
+    static func gradientImage(with hexValues: Array<Int>,
+                              size: CGSize,
+                              start: (CGFloat, CGFloat),
+                              end: (CGFloat, CGFloat),
+                              corners: UIRectCorner = .allCorners,
+                              cornerRadius: CGFloat = 0,
+                              borderWidth: CGFloat = 0,
+                              borderColor: UIColor? = nil) -> UIImage? {
+        let startPoint = CGPoint(x: start.0, y: start.1)
+        let endPoint = CGPoint(x: end.0, y: end.1)
+        var boundingRect : CGRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        UIGraphicsBeginImageContextWithOptions(boundingRect.size, false, 0)
+        let context : CGContext = UIGraphicsGetCurrentContext()!
+        
+        if borderWidth > 0 {
+            let bof : CGFloat  = borderWidth/2.0
+            boundingRect = boundingRect.insetBy(dx: bof, dy: bof)
+        }
+        
+        let cornerspath : UIBezierPath = UIBezierPath(roundedRect: boundingRect,
+                                                      byRoundingCorners: corners,
+                                                      cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
+        let path : CGPath  = cornerspath.cgPath
+        context.addPath(path)
+        context.clip()
+
+        let rgb : CGColorSpace = CGColorSpaceCreateDeviceRGB()
+        let cgColors = hexValues.map({ UIColor.hex($0).cgColor })
+        guard let gradient = CGGradient(colorsSpace: rgb, colors: cgColors as CFArray, locations: nil) else { return nil }
+        let sp : CGPoint = CGPoint(x: boundingRect.size.width * startPoint.x, y: boundingRect.size.height * startPoint.y)
+        let ep : CGPoint = CGPoint(x: boundingRect.size.width * endPoint.x, y: boundingRect.size.height * endPoint.y)
+        context.drawLinearGradient(gradient,
+                                   start: sp,
+                                   end: ep,
+                                   options: CGGradientDrawingOptions.drawsAfterEndLocation)
+        
+        if borderWidth > 0, borderColor != nil {
+            context.resetClip()
+            context.addPath(path)
+            context.setStrokeColor(borderColor!.cgColor)
+            context.setLineWidth(borderWidth)
+            context.strokePath()
+        }
+        let image : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return image.resizableImage(withCapInsets: UIEdgeInsets(top: cornerRadius, left: cornerRadius, bottom: cornerRadius, right: cornerRadius), resizingMode: UIImage.ResizingMode.stretch)
     }
     
     /// 绘制单个文字并生成图像
@@ -399,6 +442,71 @@ public extension UIImage {
         UIGraphicsEndImageContext()
         return resImage!
     }
+    
+    /// 返回修正方向后的图片
+    var fixed: UIImage {
+        let orientation = self.imageOrientation
+        if orientation == .up {
+            return self
+        }
+        
+        var transform = CGAffineTransform.identity
+        
+        switch orientation {
+        case .down, .downMirrored:
+            transform = transform.translatedBy(x: self.size.width, y: self.size.height)
+            transform = transform.rotated(by: CGFloat.pi)
+        case .left, .leftMirrored:
+            transform = transform.translatedBy(x: self.size.width, y: 0)
+            transform = transform.rotated(by: CGFloat.pi / 2.0)
+        case .right, .rightMirrored:
+            transform = transform.translatedBy(x: 0, y: self.size.height)
+            transform = transform.rotated(by: CGFloat.pi / -2.0)
+        default:
+            break
+        }
+        
+        switch orientation {
+        case .upMirrored, .downMirrored:
+            transform = transform.translatedBy(x: self.size.width, y: 0)
+            transform = transform.scaledBy(x: -1, y: 1)
+        case .leftMirrored, .rightMirrored:
+            transform = transform.translatedBy(x: self.size.height, y: 0)
+            transform = transform.scaledBy(x: -1, y: 1)
+        default:
+            break
+        }
+        
+        guard let cgimage = self.cgImage else { return self }
+        guard let colorSpace = self.cgImage?.colorSpace else { return self }
+        guard let bitmapInfo = self.cgImage?.bitmapInfo else { return self }
+        guard let bitsPerComponent = self.cgImage?.bitsPerComponent else { return self }
+        let ctx = CGContext(data: nil,
+                            width: Int(self.size.width),
+                            height: Int(self.size.height),
+                            bitsPerComponent: bitsPerComponent,
+                            bytesPerRow: 0,
+                            space: colorSpace,
+                            bitmapInfo: bitmapInfo.rawValue)
+        
+        ctx?.concatenate(transform)
+        
+        switch orientation {
+        case .left, .leftMirrored, .right, .rightMirrored:
+            ctx?.draw(cgimage, in: CGRect(x: 0, y: 0, width: self.size.height, height: self.size.width))
+        default:
+            ctx?.draw(cgimage, in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
+        }
+        
+        guard let cgimageRef = ctx?.makeImage() else { return self }
+        let result = UIImage(cgImage: cgimageRef)
+        return result
+    }
+    
+    /// 返回当前图片着色
+    var pattern: UIColor? {
+        return UIColor(patternImage: self)
+    }
 }
 
 public extension UIImage {
@@ -439,10 +547,75 @@ public extension UIImage {
 }
 
 public extension UIImage {
-    /// https://github.com/hucool/WXImageCompress
+    
+    var pixelBuffer: CVPixelBuffer? {
+        pixelBuffer(width: Int(self.size.width), height: Int(self.size.height))
+    }
+    /**
+     Resizes the image to width x height and converts it to an RGB CVPixelBuffer.
+     */
+    @objc func pixelBuffer(width: Int, height: Int) -> CVPixelBuffer? {
+        return pixelBuffer(width: width, height: height,
+                           pixelFormatType: kCVPixelFormatType_32ARGB,
+                           colorSpace: CGColorSpaceCreateDeviceRGB(),
+                           alphaInfo: .noneSkipFirst)
+    }
+    
+    /**
+     Resizes the image to width x height and converts it to a grayscale CVPixelBuffer.
+     */
+    @objc func pixelBufferGray(width: Int, height: Int) -> CVPixelBuffer? {
+        return pixelBuffer(width: width, height: height,
+                           pixelFormatType: kCVPixelFormatType_OneComponent8,
+                           colorSpace: CGColorSpaceCreateDeviceGray(),
+                           alphaInfo: .none)
+    }
+    
+    @objc func pixelBuffer(width: Int, height: Int, pixelFormatType: OSType,
+                           colorSpace: CGColorSpace, alphaInfo: CGImageAlphaInfo) -> CVPixelBuffer? {
+        var maybePixelBuffer: CVPixelBuffer?
+        let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue,
+                     kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue]
+        let status = CVPixelBufferCreate(kCFAllocatorDefault,
+                                         width,
+                                         height,
+                                         pixelFormatType,
+                                         attrs as CFDictionary,
+                                         &maybePixelBuffer)
+        
+        guard status == kCVReturnSuccess, let pixelBuffer = maybePixelBuffer else {
+            return nil
+        }
+        
+        CVPixelBufferLockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
+        let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer)
+        
+        guard let context = CGContext(data: pixelData,
+                                      width: width,
+                                      height: height,
+                                      bitsPerComponent: 8,
+                                      bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer),
+                                      space: colorSpace,
+                                      bitmapInfo: alphaInfo.rawValue) else {
+            return nil
+        }
+        
+        UIGraphicsPushContext(context)
+        context.translateBy(x: 0, y: CGFloat(height))
+        context.scaleBy(x: 1, y: -1)
+        self.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
+        UIGraphicsPopContext()
+        
+        CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
+        return pixelBuffer
+    }
+}
+
+/// https://github.com/hucool/WXImageCompress
+public extension UIImage {
+    
     enum WechatCompressType {
-        case session
-        case timeline
+        case session, timeline
     }
     
     /**

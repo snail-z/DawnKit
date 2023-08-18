@@ -154,7 +154,22 @@ public extension NSUIFont {
     
     /// 返回对应名称及样式的字体，字体不存在则返回系统默认字体
     static func fontName(_ fontName: FontName, style: FontStyle = .normal, size: CGFloat = NSUIFont.systemFontSize) -> NSUIFont {
-        return name(fontName, style: style, size: size) ?? systemFont(ofSize: size)
+        return name(fontName, style: style, size: size) ?? .default(style, size: size)
+    }
+    
+    /// 返回系统默认字体
+    static func `default`(_ style: FontStyle = .regular, size: CGFloat) -> UIFont {
+        if style.rawValue.contains("italic", caseSensitive: false) {
+            return UIFont.italicSystemFont(ofSize: size)
+        } else if style.rawValue.contains("medium", caseSensitive: false) {
+            return UIFont.systemFont(ofSize: size, weight: .medium)
+        } else if style.rawValue.contains("semibold", caseSensitive: false) {
+            return UIFont.systemFont(ofSize: size, weight: .semibold)
+        } else if style.rawValue.contains("light", caseSensitive: false) {
+            return UIFont.systemFont(ofSize: size, weight: .light)
+        } else {
+            return UIFont.systemFont(ofSize: size, weight: .regular)
+        }
     }
     
     #if os(iOS) || os(tvOS)

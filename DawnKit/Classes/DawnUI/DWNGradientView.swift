@@ -48,6 +48,13 @@ import UIKit
         }
     }
     
+    /// 渐变梯度，取值范围[0, 1]
+    @objc public var gradientLocations: [NSNumber]? {
+        didSet {
+            gradientLayer.locations = gradientLocations
+        }
+    }
+    
     /// 设置渐变路径
     @objc public var gradientPath: CGPath? {
         didSet {

@@ -32,7 +32,7 @@ public extension UIScrollView {
         if #available(iOS 11.0, *) {
             self.contentInsetAdjustmentBehavior = .never
         } else {
-            self.respondedViewController()?.automaticallyAdjustsScrollViewInsets = false
+            self.respondViewController?.automaticallyAdjustsScrollViewInsets = false
         }
     }
     

@@ -113,6 +113,16 @@ import UIKit
     /// 设置扩增手势事件的响应区域，默认UIEdgeInsetsZero
     @objc public var touchResponseInsets:UIEdgeInsets = .zero
     
+    /// 设置标题
+    @objc public func setTitle(_ title: String?) {
+        titleLabel.text = title
+    }
+    
+    /// 设置图片
+    @objc public func setImage(_ image: UIImage?) {
+        imageView.image = image
+    }
+    
     @objc public private(set) var imageView: UIImageView!
     @objc public private(set) var titleLabel: UILabel!
     private var stackView: UIStackView!

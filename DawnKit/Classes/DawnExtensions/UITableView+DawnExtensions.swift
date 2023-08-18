@@ -12,15 +12,6 @@ import UIKit
 
 public extension UITableView {
     
-    /// 消除UITableView分组上的间隙「全局设置：UITableView.appearance().sectionHeaderTopPadding = 0」
-    func headerTopPaddingRazed() {
-        if #available(iOS 15.0, *) {
-            self.sectionHeaderTopPadding = .zero
-        } else {
-            // Fallback on earlier versions
-        }
-    }
-    
     /// 返回tableView所有section的所有行数
     func numberOfRows() -> Int {
         var section = 0
@@ -49,6 +40,15 @@ public extension UITableView {
     /// 删除TableFooterView
     func removeTableFooterView() {
         tableFooterView = nil
+    }
+    
+    /// 消除UITableView分组上的间隙「全局设置：UITableView.appearance().sectionHeaderTopPadding = 0」
+    func removeHeaderTopPadding() {
+        if #available(iOS 15.0, *) {
+            self.sectionHeaderTopPadding = .zero
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     /// 使用类名出列可重用的UITableViewCell

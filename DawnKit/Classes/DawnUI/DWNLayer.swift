@@ -1,5 +1,5 @@
 //
-//  DWNShapeLayer.swift
+//  DWNLayer.swift
 //  DawnUI
 //
 //  Created by zhang on 2022/10/4.
@@ -7,6 +7,34 @@
 //
 
 import UIKit
+
+/**
+*  去除CALayer的隐式动画
+*/
+open class DWNLayer: CALayer {
+    
+    /// 是否禁止隐式动画，默认true
+    public var isDisableActions: Bool = true
+    
+    public override init() {
+        super.init()
+        initialization()
+    }
+
+    required public init?(coder: NSCoder) {
+        super.init()
+        initialization()
+    }
+    
+    internal func initialization() {}
+    
+    open override func action(forKey event: String) -> CAAction? {
+        guard isDisableActions else {
+            return super.action(forKey: event)
+        }
+        return nil
+    }
+}
 
 /**
 *  1. 默认去除CALayer的隐式动画
@@ -33,7 +61,7 @@ import UIKit
         animation.isRemovedOnCompletion = true
         animation.timingFunction = CAMediaTimingFunction(name: .easeIn)
         closure?(animation)
-        let animKey = "kMAPathAnimation"
+        let animKey = "DWNShapeLayer.path"
         add(animation, forKey: animKey)
         return animKey
     }

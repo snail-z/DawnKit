@@ -10,7 +10,7 @@
 
 import UIKit
 
-extension UIDevice {
+public extension UIDevice {
     
     /// 判断设备是否为iPhone
     static func isPhone() -> Bool {

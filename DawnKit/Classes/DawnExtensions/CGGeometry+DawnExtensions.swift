@@ -11,8 +11,23 @@ import UIKit
 public extension CGFloat {
     
     /// 获取CGFloat的绝对值
-    var abs: CGFloat {
+    var absValue: CGFloat {
         return Swift.abs(self)
+    }
+    
+    /// 将CGFloat转Int
+    var intValue: Int {
+        return toInt()
+    }
+    
+    /// 将CGFloat转Double
+    var doubleValue: Double {
+        return toDouble()
+    }
+    
+    /// 将CGFloat转String
+    var stringValue: String {
+        return toString()
     }
     
     /// 将CGFloat转Int
@@ -277,48 +292,5 @@ public extension NSUIEdgeInsets {
     /// 判断NSUIEdgeInsets是否相同
     func equalTo(_ insets2: NSUIEdgeInsets) -> Bool {
         return self == insets2
-    }
-}
-
-// MARK: - CGHorizontalEquantLayout1
-
-/// 水平分布
-public struct CGHorizontalEquantLayout1 {
-    
-    public init(count: Int, leadSpacing: CGFloat, tailSpacing: CGFloat) {
-        self.count = count
-        self.leadSpacing = leadSpacing
-        self.tailSpacing = tailSpacing
-    }
-
-    /// 最大布局宽度，默认屏幕宽
-    public var maxLayoutWidth: CGFloat = UIScreen.main.bounds.size.width
-    
-    /// 水平均分数量 (count > 1)
-    public let count: Int
-    
-    /// 起始位置间距
-    public let leadSpacing: CGFloat
-    
-    /// 末尾位置间距
-    public let tailSpacing: CGFloat
-}
-
-public extension CGHorizontalEquantLayout1 {
-    
-    /// 固定间距获取合适的宽度
-    func equalWidthThatFits(_ fixedSpacing: CGFloat) -> CGFloat {
-        let value = maxLayoutWidth - leadSpacing - tailSpacing
-        guard count > 1 else { return value }
-        let width =  (value - CGFloat(count - 1) * fixedSpacing) / CGFloat(count)
-        return floor(width)
-    }
-    
-    /// 固定宽度获取合适的间距
-    func equalSpacingThatFits(_ fixedWidth: CGFloat) -> CGFloat {
-        let value = maxLayoutWidth - leadSpacing - tailSpacing
-        guard count > 1 else { return value }
-        let spacing = (value - CGFloat(count) * fixedWidth) / CGFloat(count - 1)
-        return floor(spacing)
     }
 }

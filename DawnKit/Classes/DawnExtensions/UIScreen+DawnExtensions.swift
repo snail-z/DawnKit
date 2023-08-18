@@ -12,6 +12,16 @@ import UIKit
 
 public extension UIScreen {
     
+    /// 返回屏幕宽度
+    static var Width: CGFloat {
+        return UIScreen.main.bounds.width
+    }
+    
+    /// 返回屏幕高度
+    static var Height: CGFloat {
+        return UIScreen.main.bounds.height
+    }
+    
     /// 屏幕尺寸
     static var size: CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)

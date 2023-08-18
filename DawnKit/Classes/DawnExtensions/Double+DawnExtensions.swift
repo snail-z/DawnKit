@@ -10,6 +10,11 @@ import UIKit
 
 public extension Int {
     
+    /// 转为布尔值
+    var boolValue: Bool {
+        return self != 0
+    }
+    
     /// 是否为偶数
     var isEven: Bool {
         return (self & 1 == 0)
@@ -18,6 +23,31 @@ public extension Int {
     /// 是否为奇数
     var isOdd: Bool {
         return (self & 1 != 0)
+    }
+    
+    /// 转为Double
+    var doubleValue: Double {
+        return toDouble()
+    }
+    
+    /// 转为Float
+    var floatValue: Float {
+        return toFloat()
+    }
+    
+    /// 转为CGFloat
+    var cgFloatValue: CGFloat {
+        return toCGFloat()
+    }
+    
+    /// 转为String
+    var stringValue: String {
+        return toString()
+    }
+    
+    /// 转为UInt
+    var UIntValue: UInt {
+        return toUInt()
     }
     
     /// 转为Double
@@ -52,6 +82,26 @@ public extension Int {
 }
 
 public extension Double {
+    
+    /// 将浮点数转Int
+    var intValue: Int {
+        return toInt()
+    }
+    
+    /// 将浮点数转CGFloat
+    var cgFloatValue: CGFloat {
+        return toCGFloat()
+    }
+    
+    /// 将浮点数转String
+    var stringValue: String {
+        return toString()
+    }
+    
+    /// 将浮点数转NSNumber
+    var numberValue: NSNumber {
+        return toNumber()
+    }
     
     /// 将浮点数转Int
     func toInt() -> Int {
@@ -124,7 +174,7 @@ public extension Double {
     ///
     /// - Returns: 指定保留位数的浮点数字符串(四舍五入)
     func roundedValue(reserved digits: Int = 2, formatted: Bool = true) -> String {
-        let number = NSDecimalNumber(value: self).ansRound(digits)
+        let number = NSDecimalNumber(value: self)._dwnRound(digits)
         guard formatted else {
             return number.stringValue
         }
@@ -154,7 +204,7 @@ public extension Double {
     ///
     /// - Returns: 转为百分比形式的字符串(四舍五入)
     func percentageValue(reserved digits: Int = 2, formatted: Bool = true) -> String {
-        let nup = NSDecimalNumber(value: self).ansRound(digits + 2)
+        let nup = NSDecimalNumber(value: self)._dwnRound(digits + 2)
         let newp = nup.multiplying(byPowerOf10: 2)
         if formatted { return String(format: "%.*lf%%", digits, newp.doubleValue) }
         return newp.stringValue + "%"
@@ -182,7 +232,7 @@ public extension Double {
     /// - Returns: 只有小数部分的字符串(四舍五入)
     func onlyDecimalsValue(reserved digits: Int = 2, formatted: Bool = true) -> String {
         let value = self - Double(Int(self))
-        let number = NSDecimalNumber(value: value).ansRound(digits)
+        let number = NSDecimalNumber(value: value)._dwnRound(digits)
         if formatted { return String(format: "%.*lf", digits, number.doubleValue) }
         return number.stringValue
     }
@@ -343,7 +393,7 @@ public extension Double {
 
 private extension NSDecimalNumber {
     
-    func ansRound(_ places: Int) -> NSDecimalNumber {
+    func _dwnRound(_ places: Int) -> NSDecimalNumber {
         let handler = NSDecimalNumberHandler(roundingMode: .plain, scale: Int16(places), raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
         return self.rounding(accordingToBehavior: handler)
     }

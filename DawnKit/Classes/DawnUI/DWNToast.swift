@@ -159,7 +159,7 @@ public extension DawnViewExtensions where Base: UIView {
     private func _messageToast(message: String, delay: TimeInterval, position: DWNToastConfig.ToastPosition, style: DWNToastStyle) {
         let contentView = UIView()
         contentView.isUserInteractionEnabled = false
-        contentView.addShadow(radius: style.shadowRadius, opacity: 1, offset: .zero, color: style.shadowColor)
+        contentView.setShadow(radius: style.shadowRadius, opacity: 1, offset: .zero, color: style.shadowColor)
         base.addSubview(contentView)
         base.dwn_activeToasts.add(contentView)
         
@@ -223,7 +223,7 @@ public extension DawnViewExtensions where Base: UIView {
     private func _imageToast(image: UIImage, delay: TimeInterval, rotateAnimated: Bool, position: DWNToastConfig.ToastPosition, style: DWNToastStyle) {
         let contentView = UIView()
         contentView.isUserInteractionEnabled = false
-        contentView.addShadow(radius: style.shadowRadius, opacity: 1, offset: .zero, color: style.shadowColor)
+        contentView.setShadow(radius: style.shadowRadius, opacity: 1, offset: .zero, color: style.shadowColor)
         base.addSubview(contentView)
         base.dwn_activeToasts.add(contentView)
         
@@ -323,7 +323,7 @@ public extension DawnViewExtensions where Base: UIView {
         let hud = UIView()
         hud.backgroundColor = style.backgroundColor
         hud.layer.cornerRadius = style.cornerRadius
-        hud.addShadow(radius: 30, opacity: 1, offset: .zero, color: style.shadowColor)
+        hud.setShadow(radius: 30, opacity: 1, offset: .zero, color: style.shadowColor)
         contentView.addSubview(hud)
         
         let button = DWNButton()

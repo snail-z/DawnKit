@@ -307,4 +307,9 @@ public extension String {
         }
         return hash.map { String(format: "%02x", $0) }.joined()
     }
+    
+    /// 转成md5摘要
+    var toMd5: String {
+        return String.md5(self)
+    }
 }

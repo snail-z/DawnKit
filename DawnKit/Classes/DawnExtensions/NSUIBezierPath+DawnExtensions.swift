@@ -54,7 +54,7 @@ public extension NSUIBezierPath {
         let path = NSUIBezierPath()
         path.move(to: points[0])
         for point in points[1...] {
-            path.ansAddLine(to: point)
+            path.dwn_addLine(to: point)
         }
         path.close()
         return path
@@ -105,7 +105,7 @@ public extension NSUIBezierPath {
         path.move(to: start())
         for i in 0...count {
             let radian: CGFloat = .pi * CGFloat(2 * i) / CGFloat(count)
-            path.ansAddLine(to: link(radian))
+            path.dwn_addLine(to: link(radian))
         }
         path.close()
         return path
@@ -114,16 +114,69 @@ public extension NSUIBezierPath {
     /// 添加矩形框
     func addRect(_ rect: CGRect) {
         move(to: rect.origin)
-        ansAddLine(to: CGPoint(x: rect.maxX, y: rect.minY))
-        ansAddLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-        ansAddLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+        dwn_addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+        dwn_addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        dwn_addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
         close()
+    }
+}
+
+public extension NSUIBezierPath {
+    
+    /// 将数组中的点连成普通折线
+    static func normalPath(points: [CGPoint]) -> UIBezierPath {
+        guard points.count > 0 else {
+            return UIBezierPath()
+        }
+        
+        let path = UIBezierPath()
+        for index in 0 ..< points.count {
+            let point = points[index]
+            if index == 0 {
+                path.move(to: point)
+            } else {
+                path.dwn_addLine(to: point)
+            }
+        }
+        return path
+    }
+    
+    /// 将数组中的点连成平滑的曲线(granularity值越大越平滑)
+    static func smoothPath(points: [CGPoint], granularity: Int = 3) -> UIBezierPath {
+        guard points.count > 0 else {
+            return UIBezierPath()
+        }
+        
+        let smoothPath = UIBezierPath()
+        var innerPoints = points
+        innerPoints.insert(innerPoints[0], at: 0)
+        innerPoints.append(innerPoints.last!)
+        smoothPath.move(to: innerPoints[0])
+        for index in 1 ..< innerPoints.count - 2 {
+            let p0 = innerPoints[index - 1]
+            let p1 = innerPoints[index]
+            let p2 = innerPoints[index + 1]
+            let p3 = innerPoints[index + 2]
+            
+            for i in 1 ..< granularity {
+                let t = CGFloat(i) * (1.0 / CGFloat(granularity))
+                let tt = t * t
+                let ttt = tt * t
+                
+                var pi = CGPoint.zero
+                pi.x = 0.5 * (2*p1.x+(p2.x-p0.x)*t + (2*p0.x-5*p1.x+4*p2.x-p3.x)*tt + (3*p1.x-p0.x-3*p2.x+p3.x)*ttt)
+                pi.y = 0.5 * (2*p1.y+(p2.y-p0.y)*t + (2*p0.y-5*p1.y+4*p2.y-p3.y)*tt + (3*p1.y-p0.y-3*p2.y+p3.y)*ttt)
+                smoothPath.dwn_addLine(to: pi)
+            }
+            smoothPath.dwn_addLine(to: p2)
+        }
+        return smoothPath
     }
 }
 
 fileprivate extension NSUIBezierPath {
     
-    func ansAddLine(to point: CGPoint) {
+    func dwn_addLine(to point: CGPoint) {
         #if os(OSX)
         line(to: point)
         #endif

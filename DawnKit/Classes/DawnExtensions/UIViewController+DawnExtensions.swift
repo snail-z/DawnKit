@@ -57,13 +57,13 @@ public extension UIViewController {
     
     /// 添加背景图
     @discardableResult
-    func addBackgroundImage(_ named: String) -> UIView? {
+    func addBackgroundImage(_ named: String) -> UIImageView? {
         return addBackgroundImage(UIImage(named: named))
     }
     
     /// 添加背景图
     @discardableResult
-    func addBackgroundImage(_ image: UIImage?) -> UIView? {
+    func addBackgroundImage(_ image: UIImage?) -> UIImageView? {
         guard let img = image else { return nil }
         let imageView = UIImageView(frame: self.view.bounds)
         imageView.contentMode = .scaleAspectFill
@@ -71,7 +71,21 @@ public extension UIViewController {
         imageView.clipsToBounds = true
         self.view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
+        imageView.dwn.makeConstraints { $0.edges.equalToSuperview() }
         return imageView
+    }
+    
+    /// 模态返回至根视图控制器
+    func dismissToRootViewController(animated flag: Bool = true) {
+        if (navigationController != nil) {
+            navigationController?.popToRootViewController(animated: flag)
+        } else {
+            var presentingVC: UIViewController? = self
+            while presentingVC?.presentingViewController != nil {
+                presentingVC = presentingVC?.presentingViewController
+            }
+            presentingVC?.dismiss(animated: flag)
+        }
     }
 }
 

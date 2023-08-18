@@ -12,6 +12,18 @@ import UIKit
 
 public extension UIView {
     
+    /// 返回视图所在的控制器
+    var respondViewController: UIViewController? {
+        weak var dependResponder: UIResponder? = self
+        while dependResponder != nil {
+            dependResponder = dependResponder!.next
+            if let viewController = dependResponder as? UIViewController {
+                return viewController
+            }
+        }
+        return nil
+    }
+
     /// 设置视图禁用交互时长
     func disableInteraction(duration: TimeInterval) {
         guard self.isUserInteractionEnabled else { return }
@@ -24,18 +36,6 @@ public extension UIView {
     /// 删除视图的所有子视图
     func removeAllSubviews() {
         self.subviews.forEach({ $0.removeFromSuperview() })
-    }
-    
-    /// 返回视图所在的控制器
-    func respondedViewController() -> UIViewController? {
-        weak var dependResponder: UIResponder? = self
-        while dependResponder != nil {
-            dependResponder = dependResponder!.next
-            if let viewController = dependResponder as? UIViewController {
-                return viewController
-            }
-        }
-        return nil
     }
     
     /// 返回对当前View的截图
@@ -54,11 +54,44 @@ public extension UIView {
     ///         offset中的height为正数时，阴影向下偏移，为负数时，向上偏移
     ///
     ///   - color: 阴影颜色，默认灰色
-    func addShadow(radius: CGFloat, opacity: Float, offset: CGSize = .zero, color: UIColor? = .gray) {
-        self.layer.shadowRadius = radius
-        self.layer.shadowOpacity = opacity
-        self.layer.shadowOffset = offset
-        self.layer.shadowColor = color?.cgColor
+    func setShadow(radius: CGFloat, opacity: Float, offset: CGSize = .zero, color: UIColor? = .gray) {
+        if let colorValue = color {
+            self.layer.shadowRadius = radius
+            self.layer.shadowOpacity = opacity
+            self.layer.shadowOffset = offset
+            self.layer.shadowColor = colorValue.cgColor
+            self.layer.shouldRasterize = true
+            self.layer.rasterizationScale = UIScreen.main.scale
+        } else {
+            self.layer.shadowColor = UIColor.clear.cgColor
+        }
+    }
+    
+    /// 为视图指定位置添加圆角
+    /// - Parameters:
+    ///   - radius: 圆角半径
+    ///   - corners: 添加圆角的位置，默认四周
+    ///   - clips: 子图层超出是否需要裁减，默认true
+    func setCorner(radius: CGFloat, byRoundingCorners corners: UIRectCorner, masksToBounds clips: Bool = true) {
+        self.layer.masksToBounds = clips
+        self.layer.cornerRadius = radius
+        
+        guard !corners.contains(.allCorners) else { return }
+        
+        var maskCorners = CACornerMask()
+        if corners.contains(.topLeft) {
+            maskCorners.insert(.layerMinXMinYCorner)
+        }
+        if corners.contains(.topRight) {
+            maskCorners.insert(.layerMaxXMinYCorner)
+        }
+        if corners.contains(.bottomLeft) {
+            maskCorners.insert(.layerMinXMaxYCorner)
+        }
+        if corners.contains(.bottomRight) {
+            maskCorners.insert(.layerMaxXMaxYCorner)
+        }
+        self.layer.maskedCorners = maskCorners
     }
 }
 
