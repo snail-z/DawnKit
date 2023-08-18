@@ -108,7 +108,7 @@ public extension UICollectionView {
 
 public extension UICollectionView {
     
-    /// 水平方向滚动到指定的IndexPath
+    /// 垂直方向滚动到指定的IndexPath
     @objc func scrollToVertically(_ indexPath: IndexPath, animated: Bool) {
         guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { return }
         let delegate = delegate as? UICollectionViewDelegateFlowLayout
@@ -139,7 +139,7 @@ public extension UICollectionView {
         setContentOffset(point, animated: false)
     }
     
-    /// 根据当前滚动位置获取所在的布局分组
+    /// 根据当前滚动位置获取所在的布局分组 (offset => section)
     @objc func verticallyLayoutSection(at point: CGPoint) -> NSNumber? {
         for (index, rect) in layoutSectionRects {
             guard rect.contains(point) else { continue }
